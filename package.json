@@ -7,10 +7,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:firebase": "vite build",
+    "build:gh": "vite build --base=/cv-react/",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build:gh",
+    "deploy": "gh-pages -d dist",
+    "deploy:firebase": "npm run build:firebase && firebase deploy --only hosting"
   },
   "dependencies": {
     "react": "^19.2.0",
@@ -30,3 +33,4 @@
     "vite": "^7.2.4"
   }
 }
+
