@@ -1,0 +1,96 @@
+// src/data/text.js
+export const TEXT = {
+  es: {
+    chip: 'Currículum Vitae',
+    headline:
+      'Profesor de Desarrollo de Aplicaciones Web y Multiplataforma · Programador PHP & WordPress',
+    badge: 'Disponible para colaboración docente y desarrollo web',
+    profileTitle: 'Perfil profesional',
+    profileP1:
+      'Licenciado en Matemáticas con especialidad en Estadística, con amplia experiencia como programador PHP y administrador de sitios desarrollados en WordPress (creación de plugins y themes), y una sólida trayectoria como profesor y formador en el ámbito TIC.',
+    profileP2:
+      'Combino una fuerte base técnica con vocación docente, experiencia en certificados de profesionalidad y ciclos de Formación Profesional, y un enfoque muy práctico orientado a que el alumnado construya proyectos reales desde el primer día.',
+    teachingTitle: 'Experiencia docente',
+    devTitle: 'Experiencia como programador',
+    educationTitle: 'Formación académica y complementaria',
+    skillsTitle: 'Habilidades',
+    softTitle: 'Competencias personales',
+    techTitle: 'Tecnologías',
+    langsTitle: 'Idiomas',
+    lastUpdate: 'Última actualización: 2025',
+    spaVersion: 'Versión SPA desarrollada con React.',
+    location: '29011 · Málaga (España)',
+    downloadPdf: 'Descargar CV en PDF',
+    themeLabel: 'Tema',
+    themeDark: 'Oscuro',
+    themeLight: 'Claro',
+    langLabel: 'Idioma',
+    langEs: 'ES',
+    langEn: 'EN',
+    projectsTitle: 'Proyectos en GitHub',
+    projectsFallback:
+      'Puedes ver una selección de mis repositorios públicos en GitHub, o consultar el resto en mi perfil:',
+    viewOnGithub: 'Ver en GitHub',
+    contactTitle: 'Contacto y disponibilidad',
+    contactIntro1:
+      'Estoy abierto a colaboración docente en ciclos formativos, certificados de profesionalidad, formación para empresas y proyectos de desarrollo web.',
+    contactIntro2:
+      'Si quieres que hablemos de un proyecto concreto, puedes usar este formulario o escribirme directamente a fpalacioschaves@gmail.com.',
+    contactNameLabel: 'Nombre',
+    contactEmailLabel: 'Correo electrónico',
+    contactMessageLabel: 'Mensaje',
+    contactNamePlaceholder: '¿Cómo te llamas?',
+    contactEmailPlaceholder: 'tuemail@ejemplo.com',
+    contactMessagePlaceholder: 'Cuéntame brevemente en qué estás pensando…',
+    contactSubmit: 'Enviar mensaje',
+    contactError: 'Por favor, rellena nombre, correo y mensaje antes de enviar.',
+    contactOk:
+      'He abierto tu gestor de correo con el mensaje preparado. Si no lo ves, también puedes escribir a fpalacioschaves@gmail.com.',
+  },
+  en: {
+    chip: 'Curriculum Vitae',
+    headline: 'Web & Mobile Applications Teacher · PHP & WordPress Developer',
+    badge: 'Available for teaching collaboration and web development',
+    profileTitle: 'Professional profile',
+    profileP1:
+      'Mathematics graduate specialised in Statistics, with extensive experience as a PHP developer and WordPress site administrator (plugin and theme creation), and a solid track record as an IT trainer and teacher.',
+    profileP2:
+      'I combine a strong technical background with a clear teaching vocation, experience in vocational training and professional certificates, and a very practical, project-oriented approach so that students build real applications from day one.',
+    teachingTitle: 'Teaching experience',
+    devTitle: 'Developer experience',
+    educationTitle: 'Education and training',
+    skillsTitle: 'Skills',
+    softTitle: 'Soft skills',
+    techTitle: 'Technologies',
+    langsTitle: 'Languages',
+    lastUpdate: 'Last update: 2025',
+    spaVersion: 'SPA version built with React.',
+    location: '29011 · Málaga (Spain)',
+    downloadPdf: 'Download CV as PDF',
+    themeLabel: 'Theme',
+    themeDark: 'Dark',
+    themeLight: 'Light',
+    langLabel: 'Language',
+    langEs: 'ES',
+    langEn: 'EN',
+    projectsTitle: 'GitHub projects',
+    projectsFallback:
+      'Here you can see a selection of my public repositories on GitHub, or visit my full profile:',
+    viewOnGithub: 'View on GitHub',
+    contactTitle: 'Contact & availability',
+    contactIntro1:
+      'I am open to teaching collaborations in vocational training, professional certificates, corporate training and web development projects.',
+    contactIntro2:
+      'If you would like to discuss a specific project, you can use this form or email me directly at fpalacioschaves@gmail.com.',
+    contactNameLabel: 'Name',
+    contactEmailLabel: 'Email',
+    contactMessageLabel: 'Message',
+    contactNamePlaceholder: 'What is your name?',
+    contactEmailPlaceholder: 'youremail@example.com',
+    contactMessagePlaceholder: 'Briefly tell me what you have in mind…',
+    contactSubmit: 'Send message',
+    contactError: 'Please fill in name, email and message before sending.',
+    contactOk:
+      'I have opened your email client with the message ready. If you do not see it, you can also write to fpalacioschaves@gmail.com.',
+  },
+}
