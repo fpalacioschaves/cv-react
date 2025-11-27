@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 
-const pdfUrl = `${import.meta.env.BASE_URL}CV_2025.pdf`
+// 👇 PDF en /public/CV_2025.pdf → path relativo, funciona en GitHub Pages
+const pdfUrl = 'CV_2025.pdf'
 
+const GITHUB_USERNAME = 'fpalacioschaves'
 
 // ---------- Datos de contenido bilingüe ----------
 
@@ -11,16 +13,20 @@ const NAV_LINKS = {
     { id: 'ofrezco', label: 'Lo que ofrezco' },
     { id: 'docencia', label: 'Experiencia docente' },
     { id: 'programacion', label: 'Experiencia como programador' },
+    { id: 'proyectos', label: 'Proyectos' },
     { id: 'formacion', label: 'Formación' },
     { id: 'skills', label: 'Habilidades' },
+    { id: 'contacto', label: 'Contacto' },
   ],
   en: [
     { id: 'perfil', label: 'Profile' },
     { id: 'ofrezco', label: 'What I offer' },
     { id: 'docencia', label: 'Teaching experience' },
     { id: 'programacion', label: 'Developer experience' },
+    { id: 'proyectos', label: 'Projects' },
     { id: 'formacion', label: 'Education' },
     { id: 'skills', label: 'Skills' },
+    { id: 'contacto', label: 'Contact' },
   ],
 }
 
@@ -359,7 +365,7 @@ const skills = {
       'jQuery / Ajax',
       'HTML5 / CSS3',
       'Power BI',
-      'Python'
+      'Python',
     ],
     en: [
       'PHP',
@@ -371,7 +377,7 @@ const skills = {
       'jQuery / Ajax',
       'HTML5 / CSS3',
       'Power BI',
-      'Python'
+      'Python',
     ],
   },
 }
@@ -441,11 +447,29 @@ const TEXT = {
     langLabel: 'Idioma',
     langEs: 'ES',
     langEn: 'EN',
+    projectsTitle: 'Proyectos en GitHub',
+    projectsFallback:
+      'Puedes ver una selección de mis repositorios públicos en GitHub, o consultar el resto en mi perfil:',
+    viewOnGithub: 'Ver en GitHub',
+    contactTitle: 'Contacto y disponibilidad',
+    contactIntro1:
+      'Estoy abierto a colaboración docente en ciclos formativos, certificados de profesionalidad, formación para empresas y proyectos de desarrollo web.',
+    contactIntro2:
+      'Si quieres que hablemos de un proyecto concreto, puedes usar este formulario o escribirme directamente a fpalacioschaves@gmail.com.',
+    contactNameLabel: 'Nombre',
+    contactEmailLabel: 'Correo electrónico',
+    contactMessageLabel: 'Mensaje',
+    contactNamePlaceholder: '¿Cómo te llamas?',
+    contactEmailPlaceholder: 'tuemail@ejemplo.com',
+    contactMessagePlaceholder: 'Cuéntame brevemente en qué estás pensando…',
+    contactSubmit: 'Enviar mensaje',
+    contactError: 'Por favor, rellena nombre, correo y mensaje antes de enviar.',
+    contactOk:
+      'He abierto tu gestor de correo con el mensaje preparado. Si no lo ves, también puedes escribir a fpalacioschaves@gmail.com.',
   },
   en: {
     chip: 'Curriculum Vitae',
-    headline:
-      'Web & Mobile Applications Teacher · PHP & WordPress Developer',
+    headline: 'Web & Mobile Applications Teacher · PHP & WordPress Developer',
     badge: 'Available for teaching collaboration and web development',
     profileTitle: 'Professional profile',
     profileP1:
@@ -469,6 +493,25 @@ const TEXT = {
     langLabel: 'Language',
     langEs: 'ES',
     langEn: 'EN',
+    projectsTitle: 'GitHub projects',
+    projectsFallback:
+      'Here you can see a selection of my public repositories on GitHub, or visit my full profile:',
+    viewOnGithub: 'View on GitHub',
+    contactTitle: 'Contact & availability',
+    contactIntro1:
+      'I am open to teaching collaborations in vocational training, professional certificates, corporate training and web development projects.',
+    contactIntro2:
+      'If you would like to discuss a specific project, you can use this form or email me directly at fpalacioschaves@gmail.com.',
+    contactNameLabel: 'Name',
+    contactEmailLabel: 'Email',
+    contactMessageLabel: 'Message',
+    contactNamePlaceholder: 'What is your name?',
+    contactEmailPlaceholder: 'youremail@example.com',
+    contactMessagePlaceholder: 'Briefly tell me what you have in mind…',
+    contactSubmit: 'Send message',
+    contactError: 'Please fill in name, email and message before sending.',
+    contactOk:
+      'I have opened your email client with the message ready. If you do not see it, you can also write to fpalacioschaves@gmail.com.',
   },
 }
 
@@ -485,28 +528,27 @@ function createStyles(theme) {
       marginBottom: '2rem',
       padding: '0.6rem 10px',
       backdropFilter: 'blur(16px)',
-      background: isDark
-        ? 'rgba(15,23,42,0.92)'
-        : 'rgba(249,250,251,0.94)',
+      background: isDark ? 'rgba(15,23,42,0.92)' : 'rgba(249,250,251,0.94)',
       borderBottom: `1px solid ${
         isDark ? 'rgba(31,41,55,0.9)' : 'rgba(209,213,219,1)'
       }`,
       transition: 'background 0.25s ease, box-shadow 0.25s ease',
     },
-    // 💡 NUEVO: efecto cuando ya has hecho scroll
     navBarScrolled: {
       boxShadow: isDark
         ? '0 12px 30px rgba(15,23,42,0.9)'
         : '0 12px 30px rgba(148,163,184,0.65)',
     },
-    
-        toTopButton: {
+
+    toTopButton: {
       position: 'fixed',
       right: '1.5rem',
       bottom: '1.5rem',
       zIndex: 50,
       borderRadius: '999px',
-      border: `1px solid ${isDark ? 'rgba(148,163,184,0.9)' : 'rgba(156,163,175,1)'}`,
+      border: `1px solid ${
+        isDark ? 'rgba(148,163,184,0.9)' : 'rgba(156,163,175,1)'
+      }`,
       padding: '0.45rem 0.7rem',
       fontSize: '0.9rem',
       background: isDark ? 'rgba(15,23,42,0.95)' : 'rgba(255,255,255,0.96)',
@@ -523,8 +565,6 @@ function createStyles(theme) {
         'transform 0.12s ease, box-shadow 0.2s ease, opacity 0.2s ease, background 0.2s ease',
     },
 
-
-
     app: {
       minHeight: '100vh',
       fontFamily:
@@ -536,7 +576,6 @@ function createStyles(theme) {
       transition: 'background 0.35s ease, color 0.35s ease',
     },
     layout: {
-    
       margin: '0 auto',
       padding: '2.5rem 1.5rem 3.5rem',
     },
@@ -563,7 +602,9 @@ function createStyles(theme) {
     },
     toggleButton: {
       borderRadius: '999px',
-      border: `1px solid ${isDark ? 'rgba(55,65,81,0.9)' : 'rgba(209,213,219,1)'}`,
+      border: `1px solid ${
+        isDark ? 'rgba(55,65,81,0.9)' : 'rgba(209,213,219,1)'
+      }`,
       padding: '0.25rem 0.7rem',
       fontSize: '0.8rem',
       background: isDark ? 'rgba(15,23,42,0.9)' : 'rgba(255,255,255,0.9)',
@@ -590,7 +631,8 @@ function createStyles(theme) {
       letterSpacing: '0.08em',
       color: isDark ? '#e5e7eb' : '#111827',
       backgroundColor: isDark ? 'rgba(15,23,42,0.9)' : 'rgba(255,255,255,0.85)',
-      transition: 'background 0.25s ease, color 0.25s ease, border-color 0.25s ease',
+      transition:
+        'background 0.25s ease, color 0.25s ease, border-color 0.25s ease',
     },
     header: {
       display: 'flex',
@@ -614,7 +656,9 @@ function createStyles(theme) {
       background: isDark ? 'rgba(15, 23, 42, 0.85)' : 'rgba(255,255,255,0.95)',
       borderRadius: '1rem',
       padding: '0.85rem 1rem',
-      border: `1px solid ${isDark ? 'rgba(148, 163, 184, 0.4)' : 'rgba(209,213,219,1)'}`,
+      border: `1px solid ${
+        isDark ? 'rgba(148, 163, 184, 0.4)' : 'rgba(209,213,219,1)'
+      }`,
       fontSize: '0.9rem',
       minWidth: '230px',
       boxShadow: isDark
@@ -634,7 +678,7 @@ function createStyles(theme) {
       display: 'flex',
       flexWrap: 'wrap',
       gap: '0.75rem',
-      marginBottom: 0, // 👈 antes era 2.4rem; ahora mandará navBar
+      marginBottom: 0,
       fontSize: '0.85rem',
     },
     navLink: {
@@ -661,7 +705,7 @@ function createStyles(theme) {
     },
     section: {
       marginBottom: '2.6rem',
-      scrollMarginTop: '96px', // ajusta si tu menú es más alto o más bajo
+      scrollMarginTop: '96px',
     },
     sectionTitle: {
       fontSize: '1.2rem',
@@ -674,7 +718,9 @@ function createStyles(theme) {
     sectionBody: {
       background: isDark ? 'rgba(15, 23, 42, 0.8)' : 'rgba(255,255,255,0.95)',
       borderRadius: '1.1rem',
-      border: `1px solid ${isDark ? 'rgba(31, 41, 55, 0.9)' : 'rgba(209,213,219,1)'}`,
+      border: `1px solid ${
+        isDark ? 'rgba(31, 41, 55, 0.9)' : 'rgba(209,213,219,1)'
+      }`,
       padding: '1.4rem 1.5rem',
       boxShadow: isDark
         ? '0 18px 40px rgba(15,23,42,0.7)'
@@ -828,7 +874,9 @@ function createStyles(theme) {
     },
     pdfButton: {
       borderRadius: '999px',
-      border: `1px solid ${isDark ? 'rgba(96,165,250,1)' : 'rgba(59,130,246,1)'}`,
+      border: `1px solid ${
+        isDark ? 'rgba(96,165,250,1)' : 'rgba(59,130,246,1)'
+      }`,
       padding: '0.35rem 0.85rem',
       fontSize: '0.8rem',
       background: isDark ? 'rgba(37,99,235,0.25)' : 'rgba(59,130,246,0.1)',
@@ -841,7 +889,205 @@ function createStyles(theme) {
       transition:
         'background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.12s ease',
     },
+    projectsGrid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+      gap: '1.25rem',
+      alignItems: 'stretch',
+    },
+    projectCard: {
+      background: isDark ? 'rgba(15,23,42,0.96)' : 'rgba(255,255,255,0.98)',
+      borderRadius: '1rem',
+      border: `1px solid ${
+        isDark ? 'rgba(31,41,55,0.9)' : 'rgba(229,231,235,1)'
+      }`,
+      padding: '1rem 1.1rem 0.9rem',
+      boxShadow: isDark
+        ? '0 12px 28px rgba(15,23,42,0.75)'
+        : '0 12px 28px rgba(148,163,184,0.45)',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '0.45rem',
+      boxSizing: 'border-box',
+      transition:
+        'transform 0.12s ease, box-shadow 0.2s ease, border-color 0.2s ease',
+    },
+    projectTitleRow: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: '0.4rem',
+      marginBottom: '0.2rem',
+    },
+    projectTitle: {
+      fontSize: '0.95rem',
+      fontWeight: 600,
+      wordBreak: 'break-word',
+    },
+    projectLangTag: {
+      fontSize: '0.7rem',
+      textTransform: 'uppercase',
+      letterSpacing: '0.08em',
+      padding: '0.12rem 0.55rem',
+      borderRadius: '999px',
+      background: isDark ? 'rgba(30,64,175,0.85)' : 'rgba(219,234,254,0.95)',
+      border: `1px solid ${
+        isDark ? 'rgba(129,140,248,0.95)' : 'rgba(59,130,246,0.9)'
+      }`,
+      color: isDark ? '#e5e7eb' : '#1d4ed8',
+      whiteSpace: 'nowrap',
+    },
+    projectDescription: {
+      fontSize: '0.85rem',
+      lineHeight: 1.5,
+      color: isDark ? '#d1d5db' : '#4b5563',
+      marginTop: '0.1rem',
+    },
+    projectLink: {
+      marginTop: '0.35rem',
+      fontSize: '0.8rem',
+      textDecoration: 'none',
+      alignSelf: 'flex-start',
+      borderRadius: '999px',
+      padding: '0.2rem 0.6rem',
+      border: `1px solid ${
+        isDark ? 'rgba(59,130,246,0.9)' : 'rgba(59,130,246,0.85)'
+      }`,
+      background: isDark ? 'rgba(30,64,175,0.35)' : 'rgba(219,234,254,0.95)',
+      color: isDark ? '#93c5fd' : '#2563eb',
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '0.25rem',
+      transition:
+        'background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.12s ease',
+    },
+    contactLayout: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+      gap: '1.3rem',
+      alignItems: 'flex-start',
+    },
+    contactText: {
+      fontSize: '0.9rem',
+      lineHeight: 1.6,
+      color: isDark ? '#e5e7eb' : '#111827',
+    },
+    contactForm: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '0.7rem',
+    },
+    formLabel: {
+      fontSize: '0.78rem',
+      textTransform: 'uppercase',
+      letterSpacing: '0.12em',
+      color: isDark ? '#9ca3af' : '#6b7280',
+      marginBottom: '0.25rem',
+      display: 'block',
+    },
+    formInput: {
+      width: '100%',
+      borderRadius: '0.6rem',
+      border: `1px solid ${
+        isDark ? 'rgba(55,65,81,1)' : 'rgba(209,213,219,1)'
+      }`,
+      padding: '0.5rem 0.65rem',
+      fontSize: '0.9rem',
+      background: isDark ? 'rgba(15,23,42,0.95)' : '#ffffff',
+      color: isDark ? '#e5e7eb' : '#111827',
+      outline: 'none',
+      boxSizing: 'border-box',
+    },
+    formTextarea: {
+      width: '100%',
+      borderRadius: '0.6rem',
+      border: `1px solid ${
+        isDark ? 'rgba(55,65,81,1)' : 'rgba(209,213,219,1)'
+      }`,
+      padding: '0.55rem 0.65rem',
+      fontSize: '0.9rem',
+      minHeight: '110px',
+      resize: 'vertical',
+      background: isDark ? 'rgba(15,23,42,0.95)' : '#ffffff',
+      color: isDark ? '#e5e7eb' : '#111827',
+      outline: 'none',
+      boxSizing: 'border-box',
+    },
+    formButton: {
+      alignSelf: 'flex-start',
+      borderRadius: '999px',
+      border: `1px solid ${
+        isDark ? 'rgba(96,165,250,1)' : 'rgba(59,130,246,1)'
+      }`,
+      padding: '0.35rem 0.9rem',
+      fontSize: '0.85rem',
+      background: isDark ? 'rgba(37,99,235,0.3)' : 'rgba(59,130,246,0.12)',
+      color: isDark ? '#bfdbfe' : '#1d4ed8',
+      cursor: 'pointer',
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '0.3rem',
+      transition:
+        'background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.12s ease',
+    },
+    formFeedbackOk: {
+      fontSize: '0.8rem',
+      marginTop: '0.3rem',
+      color: isDark ? '#6ee7b7' : '#047857',
+    },
+    formFeedbackError: {
+      fontSize: '0.8rem',
+      marginTop: '0.3rem',
+      color: isDark ? '#fecaca' : '#b91c1c',
+    },
   }
+}
+
+// ---------- Componentes puros, fuera de App ----------
+
+function Section({ id, title, styles, children }) {
+  return (
+    <section id={id} style={styles.section}>
+      <h2 style={styles.sectionTitle}>{title}</h2>
+      <div style={styles.sectionBody}>{children}</div>
+    </section>
+  )
+}
+
+function Timeline({ items, styles, lang }) {
+  return (
+    <div style={styles.timeline}>
+      {items.map((item, index) => (
+        <article
+          key={item.org + item.period}
+          style={{
+            ...styles.timelineItem,
+            ...(index === items.length - 1 ? styles.timelineLast : null),
+          }}
+        >
+          <div style={styles.timelineMarkerCol}>
+            <div style={styles.timelineDot} />
+            {index !== items.length - 1 && <div style={styles.timelineLine} />}
+          </div>
+          <div>
+            <div style={styles.period}>{item.period}</div>
+            <div style={styles.role}>{item.role[lang]}</div>
+            <div style={styles.org}>
+              {item.org} · {item.location[lang]}
+            </div>
+            <ul style={styles.bullets}>
+              {item.bullets[lang].map((bullet) => (
+                <li key={bullet.slice(0, 40)} style={styles.bulletItem}>
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      ))}
+    </div>
+  )
 }
 
 // ---------- Componente principal ----------
@@ -856,36 +1102,64 @@ export default function App() {
     return window.localStorage.getItem('lang') || 'es'
   })
 
-   // 💡 NUEVO
+  const [projects, setProjects] = useState([])
   const [showToTop, setShowToTop] = useState(false)
-  
   const [scrolled, setScrolled] = useState(false)
+
+  const [contactData, setContactData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+  const [contactStatus, setContactStatus] = useState(null) // null | 'error' | 'sent'
+
+  const [activeSection, setActiveSection] = useState('perfil')
 
   const styles = createStyles(theme)
   const t = TEXT[lang]
   const offersText = offers[lang]
 
+  // Persistimos tema e idioma
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem('theme', theme)
-    }
+    if (typeof window === 'undefined') return
+    window.localStorage.setItem('theme', theme)
   }, [theme])
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem('lang', lang)
-    }
+    if (typeof window === 'undefined') return
+    window.localStorage.setItem('lang', lang)
   }, [lang])
 
-    useEffect(() => {
-    if (typeof window === 'undefined') return
+  useEffect(() => {
+    const controller = new AbortController()
 
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 80) // umbral de 80px, ajustable
+    async function fetchRepos() {
+      try {
+        const res = await fetch(
+          `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`,
+          { signal: controller.signal },
+        )
+
+        if (!res.ok) return
+        const data = await res.json()
+
+        const mapped = data.map((repo) => ({
+          id: repo.id,
+          name: repo.name,
+          description: repo.description,
+          url: repo.html_url,
+          language: repo.language,
+          updatedAt: repo.updated_at,
+        }))
+
+        setProjects(mapped)
+      } catch (err) {
+        // opcional: console.error(err)
+      }
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    fetchRepos()
+    return () => controller.abort()
   }, [])
 
   const toggleTheme = () => {
@@ -896,120 +1170,75 @@ export default function App() {
     setLang((prev) => (prev === 'es' ? 'en' : 'es'))
   }
 
-  const [activeSection, setActiveSection] = useState('perfil')
+  const handleNavClick = (sectionId) => {
+    const el = document.getElementById(sectionId)
+    if (!el) return
 
-    useEffect(() => {
-    if (typeof window === 'undefined') return
+    const navOffset = 96
+    const rect = el.getBoundingClientRect()
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+    const targetY = rect.top + scrollTop - navOffset
 
-    const sectionIds = NAV_LINKS[lang].map((l) => l.id)
-    const sections = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter(Boolean)
+    window.scrollTo({
+      top: targetY,
+      behavior: 'smooth',
+    })
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
-          }
-        })
-      },
-      {
-        root: null,
-        threshold: 0.5, // la sección cuenta como activa cuando ~50% es visible
-      },
-    )
+    setActiveSection(sectionId)
+  }
 
-    sections.forEach((sec) => observer.observe(sec))
+  const handleContactChange = (e) => {
+    const { name, value } = e.target
+    setContactData((prev) => ({ ...prev, [name]: value }))
+    if (contactStatus) setContactStatus(null)
+  }
 
-    return () => observer.disconnect()
-  }, [lang])
+  const handleContactSubmit = () => {
+    const name = contactData.name.trim()
+    const email = contactData.email.trim()
+    const message = contactData.message.trim()
 
+    if (!name || !email || !message) {
+      setContactStatus('error')
+      return
+    }
 
-   useEffect(() => {
+    const subject = lang === 'es' ? 'Contacto desde CV online' : 'Contact from online CV'
+
+    const bodyLines =
+      lang === 'es'
+        ? [`Nombre: ${name}`, `Email: ${email}`, '', 'Mensaje:', message]
+        : [`Name: ${name}`, `Email: ${email}`, '', 'Message:', message]
+
+    const body = encodeURIComponent(bodyLines.join('\n'))
+
+    const mailtoUrl = `mailto:fpalacioschaves@gmail.com?subject=${encodeURIComponent(
+      subject,
+    )}&body=${body}`
+
+    try {
+      window.open(mailtoUrl)
+    } catch (err) {
+      // si el navegador lo bloquea, simplemente no pasa nada
+    }
+
+    setContactStatus('sent')
+  }
+
+  useEffect(() => {
     if (typeof window === 'undefined') return
 
     const handleScroll = () => {
       const y = window.scrollY
-      setScrolled(y > 80)     // para la navbar con sombra
-      setShowToTop(y > 400)   // mostramos el botón solo al bajar bastante
+      setScrolled(y > 80)
+      setShowToTop(y > 400)
     }
 
     window.addEventListener('scroll', handleScroll)
-    handleScroll() // para que se calcule al cargar
+    handleScroll()
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-useEffect(() => {
-  const sectionIds = NAV_LINKS[lang].map(l => l.id)
-  const sections = sectionIds
-    .map(id => document.getElementById(id))
-    .filter(Boolean)
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id)
-        }
-      })
-    },
-    {
-      root: null,
-      threshold: 0.4, // visible al 40%
-    }
-  )
-
-  sections.forEach(sec => observer.observe(sec))
-
-  return () => observer.disconnect()
-}, [lang])
-
-
-  function Section({ id, title, children }) {
-    return (
-      <section id={id} style={styles.section}>
-        <h2 style={styles.sectionTitle}>{title}</h2>
-        <div style={styles.sectionBody}>{children}</div>
-      </section>
-    )
-  }
-
-  function Timeline({ items }) {
-    return (
-      <div style={styles.timeline}>
-        {items.map((item, index) => (
-          <article
-            key={item.org + item.period}
-            style={{
-              ...styles.timelineItem,
-              ...(index === items.length - 1 ? styles.timelineLast : null),
-            }}
-          >
-            <div style={styles.timelineMarkerCol}>
-              <div style={styles.timelineDot} />
-              {index !== items.length - 1 && <div style={styles.timelineLine} />}
-            </div>
-            <div>
-              <div style={styles.period}>{item.period}</div>
-              <div style={styles.role}>{item.role[lang]}</div>
-              <div style={styles.org}>
-                {item.org} · {item.location[lang]}
-              </div>
-              <ul style={styles.bullets}>
-                {item.bullets[lang].map((bullet) => (
-                  <li key={bullet.slice(0, 40)} style={styles.bulletItem}>
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </article>
-        ))}
-      </div>
-    )
-  }
 
   return (
     <div style={styles.app}>
@@ -1043,12 +1272,7 @@ useEffect(() => {
               {lang === 'es' ? t.langEs : t.langEn}
             </button>
 
-            <a
-              href={pdfUrl}
-              download
-              style={styles.pdfButton}
-              title={t.downloadPdf}
-            >
+            <a href={pdfUrl} download style={styles.pdfButton} title={t.downloadPdf}>
               ⬇️ {t.downloadPdf}
             </a>
           </div>
@@ -1098,10 +1322,10 @@ useEffect(() => {
         >
           <nav style={styles.nav}>
             {NAV_LINKS[lang].map((link, index) => (
-              <a
+              <button
                 key={link.id}
-                href={`#${link.id}`}
-                onClick={() => setActiveSection(link.id)}
+                type="button"
+                onClick={() => handleNavClick(link.id)}
                 style={{
                   ...styles.navLink,
                   ...(index > 0 ? styles.navLinkSecondary : null),
@@ -1109,15 +1333,13 @@ useEffect(() => {
                 }}
               >
                 {link.label}
-              </a>
+              </button>
             ))}
           </nav>
-
         </div>
 
-
         <main>
-          <Section id="perfil" title={t.profileTitle}>
+          <Section id="perfil" title={t.profileTitle} styles={styles}>
             <p style={styles.paragraph}>
               {t.profileP1.split('programador PHP').length > 1 ? (
                 <>
@@ -1129,12 +1351,10 @@ useEffect(() => {
                 t.profileP1
               )}
             </p>
-            <p style={{ ...styles.paragraph, marginTop: '0.8rem' }}>
-              {t.profileP2}
-            </p>
+            <p style={{ ...styles.paragraph, marginTop: '0.8rem' }}>{t.profileP2}</p>
           </Section>
 
-          <Section id="ofrezco" title={offersText.title}>
+          <Section id="ofrezco" title={offersText.title} styles={styles}>
             <div style={styles.offersColumns}>
               <div>
                 <div style={styles.offersTitle}>{offersText.teacherTitle}</div>
@@ -1155,15 +1375,57 @@ useEffect(() => {
             </div>
           </Section>
 
-          <Section id="docencia" title={t.teachingTitle}>
-            <Timeline items={teachingExperience} />
+          <Section id="docencia" title={t.teachingTitle} styles={styles}>
+            <Timeline items={teachingExperience} styles={styles} lang={lang} />
           </Section>
 
-          <Section id="programacion" title={t.devTitle}>
-            <Timeline items={devExperience} />
+          <Section id="programacion" title={t.devTitle} styles={styles}>
+            <Timeline items={devExperience} styles={styles} lang={lang} />
           </Section>
 
-          <Section id="formacion" title={t.educationTitle}>
+          <Section id="proyectos" title={t.projectsTitle} styles={styles}>
+            <div style={styles.projectsGrid}>
+              {projects.length === 0 ? (
+                <p style={styles.paragraph}>
+                  {t.projectsFallback}{' '}
+                  <a
+                    href={`https://github.com/${GITHUB_USERNAME}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={styles.projectLink}
+                  >
+                    🐙 {t.viewOnGithub}
+                  </a>
+                </p>
+              ) : (
+                projects.map((project) => (
+                  <article key={project.id} style={styles.projectCard}>
+                    <div style={styles.projectTitleRow}>
+                      <div style={styles.projectTitle}>{project.name}</div>
+                      {project.language && (
+                        <span style={styles.projectLangTag}>{project.language}</span>
+                      )}
+                    </div>
+
+                    {project.description && (
+                      <p style={styles.projectDescription}>{project.description}</p>
+                    )}
+
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      style={styles.projectLink}
+                    >
+                      🐙 {t.viewOnGithub}
+                    </a>
+                  </article>
+                ))
+              )}
+            </div>
+          </Section>
+
+          <Section id="formacion" title={t.educationTitle} styles={styles}>
             <div style={styles.timeline}>
               {education.map((item) => (
                 <div
@@ -1195,7 +1457,7 @@ useEffect(() => {
             </div>
           </Section>
 
-          <Section id="skills" title={t.skillsTitle}>
+          <Section id="skills" title={t.skillsTitle} styles={styles}>
             <div style={styles.skillColumns}>
               <div>
                 <div style={styles.skillGroupTitle}>{t.softTitle}</div>
@@ -1229,18 +1491,87 @@ useEffect(() => {
               </div>
             </div>
           </Section>
+
+          <Section id="contacto" title={t.contactTitle} styles={styles}>
+            <div style={styles.contactLayout}>
+              <div style={styles.contactText}>
+                <p>{t.contactIntro1}</p>
+                <p style={{ marginTop: '0.6rem' }}>{t.contactIntro2}</p>
+              </div>
+
+              <div style={styles.contactForm}>
+                <div>
+                  <label style={styles.formLabel} htmlFor="contact-name">
+                    {t.contactNameLabel}
+                  </label>
+                  <input
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    value={contactData.name}
+                    onChange={handleContactChange}
+                    placeholder={t.contactNamePlaceholder}
+                    style={styles.formInput}
+                  />
+                </div>
+
+                <div>
+                  <label style={styles.formLabel} htmlFor="contact-email">
+                    {t.contactEmailLabel}
+                  </label>
+                  <input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    value={contactData.email}
+                    onChange={handleContactChange}
+                    placeholder={t.contactEmailPlaceholder}
+                    style={styles.formInput}
+                  />
+                </div>
+
+                <div>
+                  <label style={styles.formLabel} htmlFor="contact-message">
+                    {t.contactMessageLabel}
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    value={contactData.message}
+                    onChange={handleContactChange}
+                    placeholder={t.contactMessagePlaceholder}
+                    style={styles.formTextarea}
+                  />
+                </div>
+
+                <button
+                  type="button"
+                  onClick={handleContactSubmit}
+                  style={styles.formButton}
+                >
+                  ✉️ {t.contactSubmit}
+                </button>
+
+                {contactStatus === 'error' && (
+                  <p style={styles.formFeedbackError}>{t.contactError}</p>
+                )}
+                {contactStatus === 'sent' && (
+                  <p style={styles.formFeedbackOk}>{t.contactOk}</p>
+                )}
+              </div>
+            </div>
+          </Section>
         </main>
 
         <footer style={styles.footer}>
           <div>{t.lastUpdate}</div>
           <div>{t.spaVersion}</div>
         </footer>
+
         {showToTop && (
           <button
             type="button"
-            onClick={() =>
-              window.scrollTo({ top: 0, behavior: 'smooth' })
-            }
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             style={styles.toTopButton}
             aria-label={lang === 'es' ? 'Volver arriba' : 'Back to top'}
           >
