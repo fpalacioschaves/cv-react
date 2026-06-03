@@ -1,6 +1,6 @@
 # 📄 CV React - Portfolio Interactivo
 
-Mi CV profesional, desarrollado como ejercicio de prácticas en React. Un portafolio moderno, responsivo y completamente funcional que muestra mi experiencia como profesor de Desarrollo de Aplicaciones Web y desarrollador fullstack.
+Mi CV profesional, desarrollado como ejercicio de prácticas para mis alumnos,  en React. Un portafolio moderno, responsivo y completamente funcional que muestra mi experiencia como profesor de Desarrollo de Aplicaciones Web y desarrollador fullstack.
 
 **URL en vivo:** [https://fpalacioschaves.github.io/cv-react](https://fpalacioschaves.github.io/cv-react)
 
