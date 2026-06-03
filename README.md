@@ -467,7 +467,7 @@ Vista optimizada para imprimir el CV.
 └────────────┬─────────────────────┘
              │
 ┌────────────▼─────────────────────┐
-│  Utility Layer (Utils & Constants)│
+│  Utility Layer                   │
 │  - Funciones puras               │
 │  - Configuración                 │
 │  - Helpers                       │
@@ -707,7 +707,7 @@ Ver [LICENSE](./LICENSE) para más detalles.
 
 **Francisco Palacios**
 
-Profesor de Desarrollo de Aplicaciones Web y Desarrollador Fullstack con experiencia en React, Node.js y tecnologías web modernas.
+Profesor de Desarrollo de Aplicaciones Web y Desarrollador Fullstack con experiencia en React, Node.js, Angular, Java y tecnologías web modernas.
 
 ### Enlaces
 
