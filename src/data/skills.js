@@ -23,6 +23,7 @@ export const skills = {
   tech: {
     es: [
       'PHP',
+      'Java',
       'WordPress (plugins, themes, administración de sites)',
       'MySQL',
       'JavaScript / TypeScript',
@@ -35,6 +36,7 @@ export const skills = {
     ],
     en: [
       'PHP',
+      'Java',
       'WordPress (plugins, themes, site administration)',
       'MySQL',
       'JavaScript / TypeScript',
