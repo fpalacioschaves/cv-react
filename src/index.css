@@ -75,21 +75,40 @@ section h2::after {
   .cv-hero-main {
     position: relative;
     overflow: hidden;
+    padding: clamp(1.7rem, 4vw, 2.5rem) !important;
   }
 
   .cv-hero-main::after {
     content: "";
     position: absolute;
-    right: -6rem;
-    top: -6rem;
-    width: 18rem;
-    height: 18rem;
+    right: -7rem;
+    top: -8rem;
+    width: 22rem;
+    height: 22rem;
     border-radius: 999px;
-    background: radial-gradient(circle, rgba(96, 165, 250, 0.18), transparent 68%);
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.2), transparent 68%);
     pointer-events: none;
   }
 
-  .cv-hero-topline,
+  .cv-hero-kicker {
+    margin: 0 0 0.8rem;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #2563eb;
+  }
+
+  .cv-hero-promise {
+    max-width: 48rem;
+    margin: 1rem 0 0.85rem;
+    font-size: clamp(1.08rem, 1.6vw, 1.28rem);
+    line-height: 1.55;
+    font-weight: 750;
+    color: #0f172a;
+  }
+
   .cv-hero-actions,
   .cv-hero-stack-pills {
     display: flex;
@@ -98,29 +117,12 @@ section h2::after {
     gap: 0.55rem;
   }
 
-  .cv-hero-topline {
-    justify-content: space-between;
-    margin-bottom: 0.9rem;
-  }
-
-  .cv-hero-availability {
-    max-width: 26rem;
-    border-radius: 999px;
-    border: 1px solid rgba(20, 184, 166, 0.5);
-    padding: 0.3rem 0.7rem;
-    font-size: 0.72rem;
-    line-height: 1.35;
-    color: #0f766e;
-    background: rgba(20, 184, 166, 0.1);
-  }
-
-  .cv-hero-stack-block {
-    margin-top: 1rem;
+  .cv-hero-stack-pills {
+    margin-top: 1.1rem;
     padding-top: 1rem;
     border-top: 1px solid rgba(148, 163, 184, 0.24);
   }
 
-  .cv-hero-stack-label,
   .cv-hero-card-label {
     display: block;
     margin-bottom: 0.45rem;
@@ -176,13 +178,14 @@ section h2::after {
   }
 
   @media (prefers-color-scheme: dark) {
-    .cv-hero-availability {
-      color: #99f6e4;
-      background: rgba(20, 184, 166, 0.16);
-      border-color: rgba(45, 212, 191, 0.45);
+    .cv-hero-kicker {
+      color: #93c5fd;
     }
 
-    .cv-hero-stack-label,
+    .cv-hero-promise {
+      color: #f8fafc;
+    }
+
     .cv-hero-card-label {
       color: #94a3b8;
     }
