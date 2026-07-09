@@ -6,6 +6,8 @@ function ProjectCard({ project, styles, lang, label }) {
     typeof project.description === 'string'
       ? project.description
       : project.description?.[lang]
+  const linkLabel = project.linkLabel?.[lang] || label
+  const linkIcon = project.linkIcon || '🔗'
 
   return (
     <article style={styles.projectCard}>
@@ -28,7 +30,7 @@ function ProjectCard({ project, styles, lang, label }) {
 
       {project.url && (
         <a href={project.url} target="_blank" rel="noreferrer" style={styles.projectLink}>
-          🐙 {label}
+          {linkIcon} {linkLabel}
         </a>
       )}
     </article>
@@ -47,7 +49,7 @@ export function ProjectsSection({ t, styles, lang, featuredProjects, latestProje
             project={project}
             styles={styles}
             lang={lang}
-            label={t.viewOnGithub}
+            label={t.viewProject}
           />
         ))}
       </div>
