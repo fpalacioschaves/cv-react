@@ -5,7 +5,7 @@ const SKILL_CLUSTERS = {
     {
       title: 'Desarrollo web y full stack',
       description: 'Construcción de aplicaciones, interfaces y servicios web con enfoque práctico y mantenible.',
-      items: ['PHP', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'Express'],
+      items: ['PHP', 'Laravel', 'Java', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'Express'],
     },
     {
       title: 'WordPress y CMS',
@@ -27,7 +27,7 @@ const SKILL_CLUSTERS = {
     {
       title: 'Web and full-stack development',
       description: 'Building applications, interfaces and web services with a practical and maintainable approach.',
-      items: ['PHP', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'Express'],
+      items: ['PHP', 'Laravel', 'Java', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'Express'],
     },
     {
       title: 'WordPress and CMS',
