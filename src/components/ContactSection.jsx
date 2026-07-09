@@ -1,29 +1,72 @@
 import { CONTACT_EMAIL } from '../config'
 import { Section } from './Section'
 
+const CONTACT_FOCUS = {
+  es: {
+    fitTitle: 'Tiene sentido escribirme para',
+    formTitle: 'Cuéntame qué necesitas',
+    directTitle: 'Contacto directo',
+    items: [
+      'Colaboración docente en DAM/DAW, FP TIC o certificados de profesionalidad.',
+      'Formación técnica para alumnado, profesorado, empresas o equipos de trabajo.',
+      'Desarrollo web con PHP, Laravel, Java, WordPress, React, Node.js o bases de datos.',
+      'Proyectos educativos digitales, materiales técnicos, documentación o herramientas académicas.',
+    ],
+  },
+  en: {
+    fitTitle: 'You can contact me for',
+    formTitle: 'Tell me what you need',
+    directTitle: 'Direct contact',
+    items: [
+      'Teaching collaboration in DAM/DAW, IT vocational training or professional certificates.',
+      'Technical training for students, teachers, companies or work teams.',
+      'Web development with PHP, Laravel, Java, WordPress, React, Node.js or databases.',
+      'Digital education projects, technical materials, documentation or academic tools.',
+    ],
+  },
+}
+
 export function ContactSection({
   t,
   styles,
+  lang,
   contactData,
   contactStatus,
   onContactChange,
   onContactSubmit,
 }) {
+  const copy = CONTACT_FOCUS[lang]
+
   return (
     <Section id="contacto" title={t.contactTitle} styles={styles}>
       <div style={styles.contactLayout}>
         <div style={styles.contactText}>
           <p>{t.contactIntro1}</p>
           <p style={{ marginTop: '0.6rem' }}>{t.contactIntro2}</p>
-          <p style={{ marginTop: '0.6rem' }}>
-            {t.contactDirect}{' '}
-            <a href={`mailto:${CONTACT_EMAIL}`} style={styles.contactInlineLink}>
-              {CONTACT_EMAIL}
-            </a>
-          </p>
+
+          <article style={{ ...styles.quickFact, marginTop: '1rem' }}>
+            <div style={styles.offersTitle}>{copy.fitTitle}</div>
+            <ul style={styles.offersList}>
+              {copy.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+
+          <article style={{ ...styles.quickFact, marginTop: '0.8rem' }}>
+            <span style={styles.quickFactLabel}>{copy.directTitle}</span>
+            <span style={styles.quickFactValue}>
+              {t.contactDirect}{' '}
+              <a href={`mailto:${CONTACT_EMAIL}`} style={styles.contactInlineLink}>
+                {CONTACT_EMAIL}
+              </a>
+            </span>
+          </article>
         </div>
 
-        <form style={styles.contactForm} onSubmit={onContactSubmit}>
+        <form style={{ ...styles.contactForm, ...styles.quickFact }} onSubmit={onContactSubmit}>
+          <div style={styles.offersTitle}>{copy.formTitle}</div>
+
           <div>
             <label style={styles.formLabel} htmlFor="contact-name">
               {t.contactNameLabel}

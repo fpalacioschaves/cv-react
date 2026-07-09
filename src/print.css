@@ -1,0 +1,261 @@
+@media print {
+  .cv-top-bar,
+  .cv-hero-actions,
+  .cv-hero-stack-pills,
+  .cv-latest-repos,
+  #contacto {
+    display: none !important;
+  }
+
+  header {
+    grid-template-columns: 1.65fr 0.72fr !important;
+    gap: 5mm !important;
+    margin-bottom: 5mm !important;
+  }
+
+  .cv-hero-main {
+    border: 0 !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .cv-hero-kicker {
+    display: block !important;
+    margin: 0 0 1.4mm !important;
+    font-size: 8pt !important;
+    line-height: 1.2 !important;
+  }
+
+  .cv-hero-name {
+    font-size: 22pt !important;
+    line-height: 0.98 !important;
+    margin: 0 0 2mm !important;
+    letter-spacing: -0.045em !important;
+  }
+
+  .cv-hero-headline {
+    display: block !important;
+    font-size: 8.3pt !important;
+    line-height: 1.22 !important;
+    margin: 0 0 1.8mm !important;
+    font-weight: 700 !important;
+  }
+
+  .cv-hero-promise,
+  .cv-hero-summary {
+    display: block !important;
+    font-size: 8pt !important;
+    line-height: 1.24 !important;
+    margin: 0 0 1.5mm !important;
+  }
+
+  .cv-hero-side {
+    display: grid !important;
+    gap: 1.4mm !important;
+    align-content: start !important;
+  }
+
+  .cv-hero-mini-card {
+    display: block !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 0 1.2mm !important;
+  }
+
+  .cv-hero-card-label,
+  .cv-hero-card-value,
+  .cv-hero-card-text {
+    display: block !important;
+  }
+
+  .cv-hero-card-label {
+    font-size: 6.4pt !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    margin: 0 0 0.4mm !important;
+    color: #6b7280 !important;
+  }
+
+  .cv-hero-card-value {
+    font-size: 8pt !important;
+    line-height: 1.18 !important;
+    margin: 0 0 0.4mm !important;
+    font-weight: 700 !important;
+  }
+
+  .cv-hero-card-text {
+    font-size: 7.5pt !important;
+    line-height: 1.18 !important;
+    margin: 0 !important;
+  }
+
+  .cv-hero-contact-card div {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.2mm !important;
+    margin: 0 0 0.7mm !important;
+    font-size: 7.7pt !important;
+    line-height: 1.2 !important;
+  }
+
+  .cv-profile-grid {
+    grid-template-columns: 1.2fr 0.85fr !important;
+    gap: 4mm !important;
+  }
+
+  .cv-profile-facts {
+    gap: 1.6mm !important;
+  }
+
+  .cv-profile-facts > div,
+  .cv-skill-card,
+  .cv-project-card {
+    padding: 1.7mm !important;
+  }
+
+  #docencia {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .cv-timeline {
+    gap: 1.4mm !important;
+  }
+
+  .cv-timeline-item {
+    display: grid !important;
+    grid-template-columns: 5mm minmax(0, 1fr) !important;
+    gap: 1.4mm !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 0 1.5mm !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .cv-timeline-marker-col {
+    padding-top: 2.2mm !important;
+  }
+
+  .cv-timeline-dot {
+    width: 2.2mm !important;
+    height: 2.2mm !important;
+    box-shadow: none !important;
+  }
+
+  .cv-timeline-line {
+    min-height: 100% !important;
+    margin-top: 0.8mm !important;
+  }
+
+  .cv-timeline-content {
+    border: 1px solid #d1d5db !important;
+    border-radius: 4px !important;
+    padding: 1.8mm 2.1mm !important;
+    margin: 0 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .cv-timeline-period {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 1.2mm !important;
+    font-size: 7.6pt !important;
+    line-height: 1.05 !important;
+    margin-bottom: 0.7mm !important;
+  }
+
+  .cv-timeline-period span {
+    margin-left: 0 !important;
+  }
+
+  .cv-timeline-bullets {
+    margin-top: 0.8mm !important;
+    line-height: 1.15 !important;
+  }
+
+  .cv-project-feature-block {
+    margin: 1.5mm 0 1.6mm !important;
+  }
+
+  .cv-project-secondary-grid {
+    margin-top: 1.6mm !important;
+  }
+
+  .cv-project-card-featured {
+    padding: 2mm !important;
+  }
+
+  .cv-project-card-featured::after,
+  .cv-hero-main::after {
+    display: none !important;
+  }
+
+  .cv-project-eyebrow {
+    display: block !important;
+    font-size: 6.4pt !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.4mm !important;
+  }
+
+  .cv-project-title {
+    font-size: 9.2pt !important;
+    line-height: 1.08 !important;
+  }
+
+  .cv-project-description {
+    font-size: 7.7pt !important;
+    line-height: 1.18 !important;
+    margin: 1mm 0 !important;
+  }
+
+  .cv-project-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.9mm !important;
+    margin-top: 1mm !important;
+  }
+
+  .cv-project-tag,
+  .cv-skill-pills span {
+    font-size: 7pt !important;
+    line-height: 1.1 !important;
+    padding: 0.4mm 1.2mm !important;
+    border-radius: 99px !important;
+  }
+
+  .cv-project-card a {
+    display: none !important;
+  }
+
+  .cv-skill-map {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 2mm !important;
+    margin-bottom: 2mm !important;
+  }
+
+  .cv-skill-card span {
+    display: block !important;
+  }
+
+  .cv-skill-card [style*="font-weight: 600"] {
+    font-size: 7.8pt !important;
+    line-height: 1.22 !important;
+  }
+
+  .cv-skill-pills {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.8mm !important;
+    margin-top: 1mm !important;
+  }
+
+  .cv-skill-tech-full {
+    display: none !important;
+  }
+}

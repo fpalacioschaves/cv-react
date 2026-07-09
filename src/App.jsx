@@ -282,6 +282,7 @@ export default function App() {
           <ContactSection
             t={t}
             styles={styles}
+            lang={lang}
             contactData={contactData}
             contactStatus={contactStatus}
             onContactChange={handleContactChange}
