@@ -46,6 +46,72 @@ export const teachingExperience = [
     },
   },
   {
+    period: { es: 'Abr 2026 – Jul 2026', en: 'Apr 2026 – Jul 2026' },
+    role: {
+      es: 'Monitor del Curso de Fullstack Web Developer con JavaScript',
+      en: 'Instructor – Fullstack Web Developer with JavaScript',
+    },
+    org: 'Core Networks',
+    location: {
+      es: 'CPFPE Remedios Rojo',
+      en: 'CPFPE Remedios Rojo',
+    },
+    bullets: {
+      es: [
+        'Impartición de formación full stack con JavaScript para desarrollo de aplicaciones web.',
+        'Acompañamiento del alumnado en programación, desarrollo frontend/backend y construcción de proyectos prácticos.',
+      ],
+      en: [
+        'Delivery of full-stack JavaScript training for web application development.',
+        'Student guidance in programming, frontend/backend development and practical project building.',
+      ],
+    },
+  },
+  {
+    period: { es: 'Feb 2026 – Abr 2026', en: 'Feb 2026 – Apr 2026' },
+    role: {
+      es: 'Monitor del Curso de Fullstack Junior Web Developer con Java',
+      en: 'Instructor – Junior Fullstack Web Developer with Java',
+    },
+    org: 'Core Networks',
+    location: {
+      es: 'CPFPE Remedios Rojo',
+      en: 'CPFPE Remedios Rojo',
+    },
+    bullets: {
+      es: [
+        'Impartición de formación full stack junior con Java y tecnologías asociadas al desarrollo web.',
+        'Trabajo práctico con fundamentos de programación, lógica de aplicaciones y desarrollo orientado a proyectos.',
+      ],
+      en: [
+        'Delivery of junior full-stack training with Java and technologies related to web development.',
+        'Practical work on programming fundamentals, application logic and project-based development.',
+      ],
+    },
+  },
+  {
+    period: { es: 'Nov 2025 – Feb 2026', en: 'Nov 2025 – Feb 2026' },
+    role: {
+      es: 'Monitor del Curso de Fullstack Web Developer con JavaScript',
+      en: 'Instructor – Fullstack Web Developer with JavaScript',
+    },
+    org: 'Core Networks',
+    location: {
+      es: 'CPFPE Remedios Rojo',
+      en: 'CPFPE Remedios Rojo',
+    },
+    bullets: {
+      es: [
+        'Impartición de formación full stack con JavaScript para desarrollo de aplicaciones web.',
+        'Preparación y seguimiento de actividades prácticas orientadas al aprendizaje de desarrollo frontend/backend.',
+      ],
+      en: [
+        'Delivery of full-stack JavaScript training for web application development.',
+        'Preparation and monitoring of practical activities focused on frontend/backend development learning.',
+      ],
+    },
+  },
+  {
     period: { es: 'Oct 2023 – Jun 2025', en: 'Oct 2023 – Jun 2025' },
     role: {
       es: 'Profesor FP DAM/DAW',
