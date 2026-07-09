@@ -7,6 +7,7 @@ import './responsive.css'
 import './accessibility.css'
 import './visual-polish.css'
 import './print.css'
+import './print-fixes.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
