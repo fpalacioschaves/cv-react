@@ -2,9 +2,9 @@ export const TEXT = {
   es: {
     chip: 'Currículum Vitae interactivo',
     headline:
-      'Docente técnico en DAW/DAM · Desarrollador PHP, WordPress y React · Especialista en bases de datos',
+      'Docente técnico en DAW/DAM · Desarrollador PHP, WordPress, React y Node · Especialista en bases de datos',
     heroSummary:
-      'Combino experiencia real en desarrollo web con una trayectoria docente orientada a proyectos, acompañamiento del alumnado y creación de materiales técnicos claros.',
+      'Combino experiencia real en desarrollo web con una trayectoria docente orientada a proyectos, acompañamiento del alumnado, documentación técnica clara y creación de herramientas educativas.',
     badge: 'Disponible para colaboración docente, formación técnica y desarrollo web',
     profileTitle: 'Perfil profesional',
     profileP1:
@@ -15,9 +15,9 @@ export const TEXT = {
       'Trabajo especialmente bien en contextos donde hay que convertir tecnología en aprendizaje: programación, SQL, desarrollo web, WordPress, proyectos de aula, documentación técnica y acompañamiento de trabajos finales.',
     profileHighlights: [
       { label: 'Perfil', value: 'Docente técnico + desarrollador web' },
-      { label: 'Áreas fuertes', value: 'BD, PHP, WordPress, React y formación TIC' },
+      { label: 'Áreas fuertes', value: 'BD, PHP, WordPress, React, Node y formación TIC' },
       { label: 'Ubicación', value: 'Málaga · modalidad presencial y online' },
-      { label: 'Enfoque', value: 'Aprendizaje práctico, proyectos y documentación clara' },
+      { label: 'Enfoque', value: 'Aprendizaje práctico, proyectos, documentación y producto' },
     ],
     teachingTitle: 'Experiencia docente',
     devTitle: 'Experiencia como programador',
@@ -38,10 +38,11 @@ export const TEXT = {
     langEn: 'EN',
     projectsTitle: 'Proyectos destacados',
     projectsIntro:
-      'Selección de proyectos propios que muestran mi perfil mixto: desarrollo web, herramientas educativas y uso de tecnologías modernas aplicadas a problemas reales.',
+      'Selección de proyectos que resumen mi perfil: desarrollo web, herramientas educativas, materiales docentes y tecnología aplicada a problemas reales de formación y gestión académica.',
     latestReposTitle: 'Repositorios recientes',
     projectsFallback:
       'No se han podido cargar ahora los repositorios recientes de GitHub, pero los proyectos destacados siguen disponibles.',
+    viewProject: 'Ver proyecto',
     viewOnGithub: 'Ver en GitHub',
     contactTitle: 'Contacto y disponibilidad',
     contactIntro1:
@@ -67,9 +68,9 @@ export const TEXT = {
   en: {
     chip: 'Interactive résumé',
     headline:
-      'Vocational IT teacher · PHP, WordPress & React developer · Databases specialist',
+      'Vocational IT teacher · PHP, WordPress, React & Node developer · Databases specialist',
     heroSummary:
-      'I combine real web development experience with a teaching career focused on projects, student guidance and clear technical learning materials.',
+      'I combine real web development experience with a teaching career focused on projects, student guidance, clear technical documentation and educational tools.',
     badge: 'Available for teaching collaboration, technical training and web development',
     profileTitle: 'Professional profile',
     profileP1:
@@ -80,9 +81,9 @@ export const TEXT = {
       'I work especially well in contexts where technology must become learning: programming, SQL, web development, WordPress, classroom projects, technical documentation and final project mentoring.',
     profileHighlights: [
       { label: 'Profile', value: 'Technical teacher + web developer' },
-      { label: 'Strong areas', value: 'Databases, PHP, WordPress, React and IT training' },
+      { label: 'Strong areas', value: 'Databases, PHP, WordPress, React, Node and IT training' },
       { label: 'Location', value: 'Málaga · on-site and online' },
-      { label: 'Approach', value: 'Hands-on learning, projects and clear documentation' },
+      { label: 'Approach', value: 'Hands-on learning, projects, documentation and product' },
     ],
     teachingTitle: 'Teaching experience',
     devTitle: 'Developer experience',
@@ -103,10 +104,11 @@ export const TEXT = {
     langEn: 'EN',
     projectsTitle: 'Featured projects',
     projectsIntro:
-      'A selection of personal projects showing my hybrid profile: web development, educational tools and modern technologies applied to real problems.',
+      'A selection of projects that summarise my profile: web development, educational tools, teaching materials and technology applied to real training and academic management problems.',
     latestReposTitle: 'Recent repositories',
     projectsFallback:
       'Recent GitHub repositories could not be loaded right now, but featured projects are still available.',
+    viewProject: 'View project',
     viewOnGithub: 'View on GitHub',
     contactTitle: 'Contact & availability',
     contactIntro1:
