@@ -1,6 +1,6 @@
 export function Timeline({ items, styles, lang }) {
   return (
-    <div style={styles.timeline} className="cv-timeline">
+    <div style={{ ...styles.timeline, gap: '0.95rem' }} className="cv-timeline">
       {items.map((item, index) => {
         const period = typeof item.period === 'string' ? item.period : item.period[lang]
         const isCurrent = index === 0 && /Actualidad|Present/.test(period)
@@ -11,21 +11,21 @@ export function Timeline({ items, styles, lang }) {
             key={`${item.org}-${period}`}
             style={{
               ...styles.timelineItem,
-              ...(index === items.length - 1 ? styles.timelineLast : null),
-              ...(isCurrent
-                ? {
-                    borderRadius: '1rem',
-                    padding: '0.95rem 1rem 1rem',
-                    marginLeft: '-0.75rem',
-                    marginRight: '-0.35rem',
-                    background: 'rgba(37, 99, 235, 0.08)',
-                    borderBottom: index === items.length - 1 ? 'none' : styles.timelineItem.borderBottom,
-                  }
-                : null),
+              alignItems: 'stretch',
+              gap: '0.85rem 1rem',
+              paddingBottom: index === items.length - 1 ? 0 : '0.15rem',
+              borderBottom: 'none',
             }}
             className={isCurrent ? 'cv-timeline-item cv-timeline-item-current' : 'cv-timeline-item'}
           >
-            <div style={styles.timelineMarkerCol} className="cv-timeline-marker-col">
+            <div
+              style={{
+                ...styles.timelineMarkerCol,
+                paddingTop: '1rem',
+                minWidth: '20px',
+              }}
+              className="cv-timeline-marker-col"
+            >
               <div
                 style={{
                   ...styles.timelineDot,
@@ -40,10 +40,27 @@ export function Timeline({ items, styles, lang }) {
                 className="cv-timeline-dot"
               />
               {index !== items.length - 1 && (
-                <div style={styles.timelineLine} className="cv-timeline-line" />
+                <div
+                  style={{
+                    ...styles.timelineLine,
+                    minHeight: '100%',
+                    marginTop: '0.4rem',
+                  }}
+                  className="cv-timeline-line"
+                />
               )}
             </div>
-            <div className="cv-timeline-content">
+
+            <div
+              style={{
+                ...styles.quickFact,
+                width: '100%',
+                padding: isCurrent ? '1.05rem 1.15rem' : '0.95rem 1.05rem',
+                borderColor: isCurrent ? 'rgba(37, 99, 235, 0.35)' : styles.quickFact.border,
+                background: isCurrent ? 'rgba(37, 99, 235, 0.08)' : styles.quickFact.background,
+              }}
+              className="cv-timeline-content"
+            >
               <div style={styles.period} className="cv-timeline-period">
                 {period}
                 {isCurrent && (
