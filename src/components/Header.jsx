@@ -9,12 +9,17 @@ import {
 export function Header({
   t,
   styles,
-  pdfUrl,
   theme,
   lang,
   onToggleTheme,
   onToggleLang,
 }) {
+  const handlePrint = () => {
+    if (typeof window !== 'undefined') {
+      window.print()
+    }
+  }
+
   return (
     <>
       <div style={styles.topBar}>
@@ -45,9 +50,9 @@ export function Header({
             {lang === 'es' ? t.langEs : t.langEn}
           </button>
 
-          <a href={pdfUrl} download style={styles.pdfButton} title={t.downloadPdf}>
-            ⬇️ {t.downloadPdf}
-          </a>
+          <button type="button" onClick={handlePrint} style={styles.pdfButton} title={t.printCv}>
+            🖨️ {t.printCv}
+          </button>
         </div>
       </div>
 
@@ -59,9 +64,9 @@ export function Header({
           <p style={styles.heroSummary}>{t.heroSummary}</p>
 
           <div style={styles.heroActions}>
-            <a href={pdfUrl} download style={styles.primaryButton}>
-              {t.downloadPdf}
-            </a>
+            <button type="button" onClick={handlePrint} style={styles.primaryButton}>
+              🖨️ {t.printCv}
+            </button>
             <a
               href={GITHUB_PROFILE_URL}
               target="_blank"
