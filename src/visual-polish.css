@@ -1,0 +1,313 @@
+.reveal-enabled .cv-reveal,
+.reveal-enabled .cv-reveal-card {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.68s ease,
+    transform 0.68s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+  transition-delay: calc(min(var(--reveal-index, 0), 5) * 55ms);
+  will-change: opacity, transform;
+}
+
+.reveal-enabled .cv-reveal.is-visible,
+.reveal-enabled .cv-reveal-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cv-section-panel,
+.cv-offer-card,
+.cv-project-card,
+.cv-timeline-content,
+.cv-availability-block,
+.cv-footer-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.cv-offer-card,
+.cv-project-card,
+.cv-timeline-content,
+.cv-availability-block {
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.cv-offer-card:hover,
+.cv-project-card:hover,
+.cv-timeline-content:hover,
+.cv-availability-block:hover {
+  transform: translateY(-3px);
+  border-color: rgba(96, 165, 250, 0.58) !important;
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.18) !important;
+}
+
+.cv-availability-block {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 1rem;
+  align-items: center;
+  border-color: rgba(96, 165, 250, 0.45) !important;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.14), transparent 46%),
+    linear-gradient(135deg, rgba(37, 99, 235, 0.08), transparent 55%) !important;
+}
+
+.cv-availability-block::after {
+  content: "";
+  position: absolute;
+  right: -4rem;
+  top: -4.5rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.22), transparent 70%);
+  pointer-events: none;
+}
+
+.cv-availability-heading {
+  position: relative;
+  z-index: 1;
+}
+
+.cv-availability-kicker {
+  display: inline-flex;
+  margin-bottom: 0.35rem;
+  font-size: 0.68rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 850;
+  color: #2563eb;
+}
+
+.cv-availability-intro {
+  margin: 0.35rem 0 0;
+  max-width: 46rem;
+  font-size: 0.92rem;
+  line-height: 1.58;
+  color: #475569;
+}
+
+.cv-availability-list {
+  position: relative;
+  z-index: 1;
+}
+
+.cv-project-card-featured {
+  border-width: 1.5px !important;
+}
+
+.cv-project-card-featured .cv-project-tags {
+  max-width: 58rem;
+}
+
+.cv-project-card-featured .cv-project-tag:first-child,
+.cv-project-card-featured .cv-project-tag:nth-child(3) {
+  border-color: rgba(96, 165, 250, 0.62) !important;
+  color: #1d4ed8 !important;
+  background: rgba(37, 99, 235, 0.1) !important;
+}
+
+.cv-footer-card {
+  margin-top: 2.2rem;
+  border: 1px solid rgba(148, 163, 184, 0.38);
+  border-radius: 1.15rem;
+  padding: 1.15rem 1.25rem;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.1), transparent 55%),
+    rgba(255, 255, 255, 0.86);
+}
+
+.cv-footer-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.cv-footer-name,
+.cv-footer-role,
+.cv-footer-tagline {
+  display: block;
+}
+
+.cv-footer-name {
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.cv-footer-role {
+  margin-top: 0.18rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.cv-footer-tagline {
+  margin-top: 0.18rem;
+  font-size: 0.86rem;
+  color: #64748b;
+}
+
+.cv-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: flex-end;
+}
+
+.cv-footer-links a {
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  border-radius: 999px;
+  padding: 0.28rem 0.68rem;
+  color: #1d4ed8;
+  font-size: 0.82rem;
+  font-weight: 750;
+  text-decoration: none;
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.cv-footer-links a:hover {
+  border-color: rgba(37, 99, 235, 0.8);
+  background: rgba(37, 99, 235, 0.14);
+}
+
+.cv-footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  margin-top: 0.9rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.24);
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cv-offer-card:hover,
+  .cv-project-card:hover,
+  .cv-timeline-content:hover,
+  .cv-availability-block:hover {
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32) !important;
+  }
+
+  .cv-availability-block {
+    background:
+      radial-gradient(circle at top left, rgba(96, 165, 250, 0.16), transparent 46%),
+      linear-gradient(135deg, rgba(37, 99, 235, 0.16), transparent 55%),
+      rgba(15, 23, 42, 0.86) !important;
+  }
+
+  .cv-availability-kicker {
+    color: #93c5fd;
+  }
+
+  .cv-availability-intro {
+    color: #94a3b8;
+  }
+
+  .cv-project-card-featured .cv-project-tag:first-child,
+  .cv-project-card-featured .cv-project-tag:nth-child(3) {
+    color: #bfdbfe !important;
+    background: rgba(37, 99, 235, 0.18) !important;
+  }
+
+  .cv-footer-card {
+    background:
+      linear-gradient(135deg, rgba(37, 99, 235, 0.16), transparent 55%),
+      rgba(15, 23, 42, 0.82);
+    border-color: rgba(71, 85, 105, 0.92);
+  }
+
+  .cv-footer-role {
+    color: #93c5fd;
+  }
+
+  .cv-footer-tagline,
+  .cv-footer-meta {
+    color: #94a3b8;
+  }
+
+  .cv-footer-links a {
+    color: #bfdbfe;
+    background: rgba(37, 99, 235, 0.16);
+  }
+}
+
+@media (max-width: 760px) {
+  .cv-availability-block {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-footer-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-enabled .cv-reveal,
+  .reveal-enabled .cv-reveal-card,
+  .reveal-enabled .cv-reveal.is-visible,
+  .reveal-enabled .cv-reveal-card.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .cv-offer-card:hover,
+  .cv-project-card:hover,
+  .cv-timeline-content:hover,
+  .cv-availability-block:hover {
+    transform: none !important;
+  }
+}
+
+@media print {
+  .reveal-enabled .cv-reveal,
+  .reveal-enabled .cv-reveal-card,
+  .reveal-enabled .cv-reveal.is-visible,
+  .reveal-enabled .cv-reveal-card.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .cv-offer-card,
+  .cv-project-card,
+  .cv-timeline-content,
+  .cv-availability-block,
+  .cv-footer-card {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .cv-availability-block {
+    display: block !important;
+  }
+
+  .cv-availability-intro,
+  .cv-availability-kicker,
+  .cv-footer-links {
+    display: none !important;
+  }
+
+  .cv-footer-card {
+    border: 0 !important;
+    padding: 0 !important;
+    margin-top: 3mm !important;
+  }
+
+  .cv-footer-meta {
+    border-top: 0 !important;
+    margin-top: 1mm !important;
+    padding-top: 0 !important;
+    font-size: 7pt !important;
+  }
+}
