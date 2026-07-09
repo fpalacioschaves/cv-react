@@ -1,27 +1,41 @@
 import { Section } from './Section'
 
-function ProjectCard({ project, styles, lang, label }) {
-  const title = typeof project.name === 'string' ? project.name : project.name[lang]
-  const description =
-    typeof project.description === 'string'
-      ? project.description
-      : project.description?.[lang]
+function getLocalizedValue(value, lang) {
+  if (!value) return ''
+  return typeof value === 'string' ? value : value[lang]
+}
+
+function ProjectCard({ project, styles, lang, label, featured = false }) {
+  const title = getLocalizedValue(project.name, lang)
+  const description = getLocalizedValue(project.description, lang)
   const linkLabel = project.linkLabel?.[lang] || label
   const linkIcon = project.linkIcon || '🔗'
 
   return (
-    <article style={styles.projectCard}>
-      <div style={styles.projectTitleRow}>
-        <div style={styles.projectTitle}>{title}</div>
+    <article
+      style={styles.projectCard}
+      className={featured ? 'cv-project-card cv-project-card-featured' : 'cv-project-card'}
+    >
+      <div style={styles.projectTitleRow} className="cv-project-title-row">
+        <div>
+          {featured && <span className="cv-project-eyebrow">Proyecto principal</span>}
+          <div style={styles.projectTitle} className="cv-project-title">
+            {title}
+          </div>
+        </div>
         {project.language && <span style={styles.projectLangTag}>{project.language}</span>}
       </div>
 
-      {description && <p style={styles.projectDescription}>{description}</p>}
+      {description && (
+        <p style={styles.projectDescription} className="cv-project-description">
+          {description}
+        </p>
+      )}
 
       {project.tags && (
-        <div style={styles.projectTags}>
+        <div style={styles.projectTags} className="cv-project-tags">
           {project.tags.map((tag) => (
-            <span key={tag} style={styles.projectMiniTag}>
+            <span key={tag} style={styles.projectMiniTag} className="cv-project-tag">
               {tag}
             </span>
           ))}
@@ -38,21 +52,38 @@ function ProjectCard({ project, styles, lang, label }) {
 }
 
 export function ProjectsSection({ t, styles, lang, featuredProjects, latestProjects }) {
+  const [mainProject, ...secondaryProjects] = featuredProjects
+  const mainLabel = lang === 'es' ? 'Caso de estudio destacado' : 'Featured case study'
+
   return (
     <Section id="proyectos" title={t.projectsTitle} styles={styles}>
       <p style={{ ...styles.paragraph, marginBottom: '1rem' }}>{t.projectsIntro}</p>
 
-      <div style={styles.projectsGrid}>
-        {featuredProjects.map((project) => (
+      {mainProject && (
+        <div className="cv-project-feature-block" aria-label={mainLabel}>
           <ProjectCard
-            key={project.id}
-            project={project}
+            project={mainProject}
             styles={styles}
             lang={lang}
             label={t.viewProject}
+            featured
           />
-        ))}
-      </div>
+        </div>
+      )}
+
+      {secondaryProjects.length > 0 && (
+        <div style={styles.projectsGrid} className="cv-project-secondary-grid">
+          {secondaryProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              styles={styles}
+              lang={lang}
+              label={t.viewProject}
+            />
+          ))}
+        </div>
+      )}
 
       <div style={styles.latestProjectsBlock}>
         <h3 style={styles.projectsSubTitle}>{t.latestReposTitle}</h3>
