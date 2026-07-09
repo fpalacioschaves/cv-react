@@ -38,14 +38,18 @@ export function OffersSection({ offersText, styles }) {
 
       {availableItems.length > 0 && (
         <aside
-          className="cv-availability-block"
+          className="cv-availability-block cv-reveal-card"
           aria-label={offersText.availableTitle || 'Disponible para'}
           style={{
             ...styles.quickFact,
             marginBottom: '1.15rem',
           }}
         >
-          <div style={styles.offersTitle}>{offersText.availableTitle || 'Disponible para'}</div>
+          <div className="cv-availability-heading">
+            <span className="cv-availability-kicker">{offersText.availableKicker || 'Perfil operativo'}</span>
+            <div style={styles.offersTitle}>{offersText.availableTitle || 'Disponible para'}</div>
+            {offersText.availableIntro && <p className="cv-availability-intro">{offersText.availableIntro}</p>}
+          </div>
           <div className="cv-availability-list">
             {availableItems.map((item) => (
               <span key={item} className="cv-availability-pill">
@@ -63,7 +67,7 @@ export function OffersSection({ offersText, styles }) {
         }}
       >
         {cards.map((card) => (
-          <article key={card.title} style={styles.quickFact}>
+          <article key={card.title} style={styles.quickFact} className="cv-offer-card cv-reveal-card">
             <div style={styles.offersTitle}>{card.title}</div>
             <ul style={styles.offersList}>
               {card.points.map((point) => (
