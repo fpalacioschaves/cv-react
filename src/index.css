@@ -126,8 +126,8 @@ section h2::after {
 
   body {
     margin: 0 !important;
-    font-size: 9pt !important;
-    line-height: 1.25 !important;
+    font-size: 8.6pt !important;
+    line-height: 1.18 !important;
   }
 
   nav,
@@ -175,8 +175,8 @@ section h2::after {
   header {
     display: grid !important;
     grid-template-columns: 1.45fr 0.8fr !important;
-    gap: 5mm !important;
-    margin: 0 0 5mm !important;
+    gap: 4mm !important;
+    margin: 0 0 4mm !important;
     break-after: avoid;
     page-break-after: avoid;
   }
@@ -193,20 +193,20 @@ section h2::after {
   }
 
   header h1 {
-    font-size: 22pt !important;
-    line-height: 1.05 !important;
+    font-size: 19pt !important;
+    line-height: 1.02 !important;
     letter-spacing: -0.04em !important;
-    margin: 0 0 2mm !important;
+    margin: 0 0 1.6mm !important;
   }
 
   header p {
-    font-size: 9pt !important;
-    line-height: 1.28 !important;
-    margin-bottom: 2mm !important;
+    font-size: 8.4pt !important;
+    line-height: 1.22 !important;
+    margin-bottom: 1.4mm !important;
   }
 
   section {
-    margin: 0 0 5mm !important;
+    margin: 0 0 4mm !important;
     scroll-margin-top: 0 !important;
     break-inside: auto !important;
     page-break-inside: auto !important;
@@ -214,9 +214,9 @@ section h2::after {
 
   section h2 {
     display: block !important;
-    font-size: 10.5pt !important;
-    letter-spacing: 0.08em !important;
-    margin: 0 0 2mm !important;
+    font-size: 10pt !important;
+    letter-spacing: 0.07em !important;
+    margin: 0 0 1.7mm !important;
     break-after: avoid;
     page-break-after: avoid;
   }
@@ -227,40 +227,40 @@ section h2::after {
 
   p,
   li {
-    font-size: 8.6pt !important;
-    line-height: 1.28 !important;
+    font-size: 8.2pt !important;
+    line-height: 1.22 !important;
   }
 
   p {
-    margin-bottom: 2mm !important;
+    margin-bottom: 1.4mm !important;
   }
 
   ul {
-    margin: 1mm 0 0 !important;
-    padding-left: 4mm !important;
+    margin: 0.8mm 0 0 !important;
+    padding-left: 3.8mm !important;
   }
 
   li {
-    margin-bottom: 0.7mm !important;
+    margin-bottom: 0.45mm !important;
   }
 
   article {
     border: 1px solid #d1d5db !important;
-    border-radius: 5px !important;
-    padding: 3mm !important;
-    margin: 0 0 3mm !important;
+    border-radius: 4px !important;
+    padding: 2.3mm !important;
+    margin: 0 0 2mm !important;
     overflow: visible !important;
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
   h3 {
-    font-size: 9.5pt !important;
-    margin-bottom: 1.5mm !important;
+    font-size: 9pt !important;
+    margin-bottom: 1mm !important;
   }
 
   [style*="grid-template-columns"] {
-    gap: 3mm !important;
+    gap: 2.2mm !important;
   }
 
   [style*="padding: 1.35rem"],
@@ -272,7 +272,7 @@ section h2::after {
 
   footer {
     color: #4b5563 !important;
-    font-size: 7.5pt !important;
-    margin-top: 3mm !important;
+    font-size: 7pt !important;
+    margin-top: 2mm !important;
   }
 }
