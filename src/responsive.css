@@ -23,14 +23,23 @@
 }
 
 @media screen and (max-width: 720px) {
+  section {
+    margin-bottom: 1.45rem !important;
+  }
+
   section h2 {
     gap: 0.55rem;
     font-size: 0.95rem !important;
     line-height: 1.25;
+    margin-bottom: 0.65rem !important;
   }
 
   section h2::after {
     width: 2.8rem;
+  }
+
+  section > div {
+    padding: 1rem !important;
   }
 
   .cv-hero-kicker {
@@ -60,6 +69,14 @@
     align-items: flex-start !important;
   }
 
+  .cv-latest-repos {
+    display: none !important;
+  }
+
+  .cv-timeline {
+    gap: 0.65rem !important;
+  }
+
   .cv-timeline-item {
     grid-template-columns: 24px minmax(0, 1fr) !important;
     gap: 0.55rem !important;
@@ -82,30 +99,59 @@
 
   .cv-timeline-bullets {
     padding-left: 1rem !important;
-    line-height: 1.5 !important;
+    line-height: 1.45 !important;
+  }
+
+  .cv-skill-map {
+    gap: 0.65rem !important;
+    margin-bottom: 0.9rem !important;
+  }
+
+  .cv-skill-card {
+    padding: 0.85rem !important;
+  }
+
+  .cv-skill-pills {
+    gap: 0.35rem !important;
+  }
+
+  .cv-skill-pills span {
+    font-size: 0.72rem !important;
+    padding: 0.16rem 0.48rem !important;
+  }
+
+  .cv-skill-tech-full {
+    display: none !important;
   }
 }
 
 @media screen and (max-width: 560px) {
   .cv-hero-main {
-    padding: 1.25rem !important;
+    padding: 1.05rem !important;
   }
 
   .cv-hero-name {
-    font-size: clamp(2.15rem, 13vw, 3.1rem) !important;
-    letter-spacing: -0.055em !important;
+    font-size: clamp(2.05rem, 12vw, 2.8rem) !important;
+    letter-spacing: -0.045em !important;
   }
 
   .cv-hero-promise {
-    margin-top: 0.9rem !important;
+    margin-top: 0.8rem !important;
+    margin-bottom: 0.65rem !important;
+  }
+
+  .cv-hero-summary {
+    line-height: 1.52 !important;
   }
 
   .cv-hero-stack-pills {
-    padding-top: 0.85rem !important;
+    padding-top: 0.75rem !important;
+    margin-top: 0.8rem !important;
   }
 
   .cv-hero-actions {
     gap: 0.45rem !important;
+    margin-top: 0.85rem !important;
   }
 
   .cv-hero-actions > * {
@@ -113,24 +159,32 @@
     justify-content: center;
   }
 
+  .cv-hero-mini-card {
+    padding: 0.85rem !important;
+  }
+
   .cv-project-card-featured {
-    padding: 1.05rem !important;
+    padding: 0.95rem !important;
   }
 
   .cv-project-card-featured::after,
   .cv-hero-main::after {
-    opacity: 0.65;
+    opacity: 0.45;
   }
 
   .cv-timeline-item {
-    grid-template-columns: 20px minmax(0, 1fr) !important;
+    grid-template-columns: 18px minmax(0, 1fr) !important;
   }
 
   .cv-timeline-content {
-    padding: 0.85rem !important;
+    padding: 0.78rem !important;
   }
 
   .cv-timeline-bullets li {
-    margin-bottom: 0.35rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .cv-skill-details {
+    gap: 0.85rem !important;
   }
 }
