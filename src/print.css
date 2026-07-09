@@ -115,6 +115,11 @@
     padding: 1.7mm !important;
   }
 
+  #docencia {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
   .cv-timeline {
     gap: 1.4mm !important;
   }
