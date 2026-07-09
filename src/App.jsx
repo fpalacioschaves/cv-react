@@ -213,12 +213,12 @@ export default function App() {
       await emailjs.send(
         VITE_EMAILJS_SERVICE_ID,
         VITE_EMAILJS_TEMPLATE_ID,
+        VITE_EMAILJS_PUBLIC_KEY,
         {
           from_name: name,
           reply_to: email,
           message,
         },
-        VITE_EMAILJS_PUBLIC_KEY,
       )
 
       setContactData({ name: '', email: '', message: '' })
@@ -282,6 +282,7 @@ export default function App() {
           <ContactSection
             t={t}
             styles={styles}
+            lang={lang}
             contactData={contactData}
             contactStatus={contactStatus}
             onContactChange={handleContactChange}
