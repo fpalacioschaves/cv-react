@@ -16,6 +16,33 @@ export function Header({
   onToggleTheme,
   onToggleLang,
 }) {
+  const copy =
+    lang === 'es'
+      ? {
+          stackLabel: 'Stack principal',
+          roleLabel: 'Perfil híbrido',
+          roleValue: 'Docente FP + desarrollador web',
+          roleText:
+            'Experiencia en aula, programación, bases de datos, WordPress y proyectos técnicos reales.',
+          focusLabel: 'Foco de trabajo',
+          focusValue: 'Formación TIC con mentalidad de producto',
+          focusText:
+            'Materiales claros, proyectos aplicados, documentación útil y soluciones mantenibles.',
+          contactLabel: 'Contacto rápido',
+        }
+      : {
+          stackLabel: 'Core stack',
+          roleLabel: 'Hybrid profile',
+          roleValue: 'Vocational teacher + web developer',
+          roleText:
+            'Experience in the classroom, programming, databases, WordPress and real technical projects.',
+          focusLabel: 'Work focus',
+          focusValue: 'IT training with a product mindset',
+          focusText:
+            'Clear materials, applied projects, useful documentation and maintainable solutions.',
+          contactLabel: 'Quick contact',
+        }
+
   const handlePrint = () => {
     if (typeof window !== 'undefined') {
       window.print()
@@ -70,7 +97,7 @@ export function Header({
           <p style={styles.heroSummary}>{t.heroSummary}</p>
 
           <div style={styles.heroStackBlock}>
-            <span style={styles.heroStackLabel}>{t.heroStackLabel}</span>
+            <span style={styles.heroStackLabel}>{copy.stackLabel}</span>
             <div style={styles.heroStackPills}>
               {MAIN_STACK.map((item) => (
                 <span key={item} style={styles.heroStackPill}>
@@ -105,19 +132,19 @@ export function Header({
 
         <aside style={styles.heroBentoSide}>
           <div style={styles.heroMiniCard}>
-            <span style={styles.heroCardLabel}>{t.heroRoleLabel}</span>
-            <strong style={styles.heroCardValue}>{t.heroRoleValue}</strong>
-            <span style={styles.heroCardText}>{t.heroRoleText}</span>
+            <span style={styles.heroCardLabel}>{copy.roleLabel}</span>
+            <strong style={styles.heroCardValue}>{copy.roleValue}</strong>
+            <span style={styles.heroCardText}>{copy.roleText}</span>
           </div>
 
           <div style={styles.heroMiniCard}>
-            <span style={styles.heroCardLabel}>{t.heroFocusLabel}</span>
-            <strong style={styles.heroCardValue}>{t.heroFocusValue}</strong>
-            <span style={styles.heroCardText}>{t.heroFocusText}</span>
+            <span style={styles.heroCardLabel}>{copy.focusLabel}</span>
+            <strong style={styles.heroCardValue}>{copy.focusValue}</strong>
+            <span style={styles.heroCardText}>{copy.focusText}</span>
           </div>
 
           <div style={{ ...styles.heroMiniCard, ...styles.heroContactCard }}>
-            <span style={styles.heroCardLabel}>{t.heroContactLabel}</span>
+            <span style={styles.heroCardLabel}>{copy.contactLabel}</span>
             <div style={styles.contactItem}>
               <span>📍</span>
               <span>{t.location}</span>
