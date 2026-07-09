@@ -1,0 +1,71 @@
+@media print {
+  #programacion {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  #formacion {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  #formacion .cv-section-panel {
+    padding: 0 !important;
+  }
+
+  #formacion .cv-education-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.4mm !important;
+    margin: 0 0 2mm !important;
+  }
+
+  #formacion .cv-education-item {
+    display: grid !important;
+    grid-template-columns: 3.2mm minmax(0, 1fr) !important;
+    gap: 1mm !important;
+    align-items: start !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 4px !important;
+    padding: 1.25mm 1.6mm !important;
+    margin: 0 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  #formacion .cv-education-marker-col {
+    padding-top: 1mm !important;
+    min-width: 0 !important;
+  }
+
+  #formacion .cv-education-dot {
+    width: 1.8mm !important;
+    height: 1.8mm !important;
+    box-shadow: none !important;
+  }
+
+  #formacion .cv-education-content {
+    min-width: 0 !important;
+  }
+
+  #formacion .cv-education-title {
+    font-size: 8pt !important;
+    line-height: 1.1 !important;
+    margin: 0 0 0.4mm !important;
+  }
+
+  #formacion .cv-education-center,
+  #formacion .cv-education-extra {
+    font-size: 7.2pt !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+  }
+
+  #habilidades {
+    margin-top: 2.5mm !important;
+  }
+
+  #habilidades .cv-section-panel {
+    padding: 0 !important;
+  }
+}
