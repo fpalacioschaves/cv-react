@@ -86,28 +86,28 @@ export function Header({
       </div>
 
       <header style={styles.header}>
-        <section style={styles.heroContent}>
-          <div style={styles.heroTopLine}>
+        <section style={styles.heroContent} className="cv-hero-main">
+          <div className="cv-hero-topline">
             <span style={styles.chip}>{t.chip}</span>
-            <span style={styles.heroAvailability}>{t.badge}</span>
+            <span className="cv-hero-availability">{t.badge}</span>
           </div>
 
           <h1 style={styles.name}>Francisco Palacios&nbsp;Chaves</h1>
           <p style={styles.subtitle}>{t.headline}</p>
           <p style={styles.heroSummary}>{t.heroSummary}</p>
 
-          <div style={styles.heroStackBlock}>
-            <span style={styles.heroStackLabel}>{copy.stackLabel}</span>
-            <div style={styles.heroStackPills}>
+          <div className="cv-hero-stack-block">
+            <span className="cv-hero-stack-label">{copy.stackLabel}</span>
+            <div className="cv-hero-stack-pills">
               {MAIN_STACK.map((item) => (
-                <span key={item} style={styles.heroStackPill}>
+                <span key={item} className="cv-hero-stack-pill">
                   {item}
                 </span>
               ))}
             </div>
           </div>
 
-          <div style={styles.heroActions}>
+          <div style={styles.heroActions} className="cv-hero-actions">
             <button type="button" onClick={handlePrint} style={styles.primaryButton}>
               🖨️ {t.printCv}
             </button>
@@ -130,21 +130,21 @@ export function Header({
           </div>
         </section>
 
-        <aside style={styles.heroBentoSide}>
-          <div style={styles.heroMiniCard}>
-            <span style={styles.heroCardLabel}>{copy.roleLabel}</span>
-            <strong style={styles.heroCardValue}>{copy.roleValue}</strong>
-            <span style={styles.heroCardText}>{copy.roleText}</span>
+        <aside className="cv-hero-side">
+          <div className="cv-hero-mini-card">
+            <span className="cv-hero-card-label">{copy.roleLabel}</span>
+            <strong className="cv-hero-card-value">{copy.roleValue}</strong>
+            <span className="cv-hero-card-text">{copy.roleText}</span>
           </div>
 
-          <div style={styles.heroMiniCard}>
-            <span style={styles.heroCardLabel}>{copy.focusLabel}</span>
-            <strong style={styles.heroCardValue}>{copy.focusValue}</strong>
-            <span style={styles.heroCardText}>{copy.focusText}</span>
+          <div className="cv-hero-mini-card">
+            <span className="cv-hero-card-label">{copy.focusLabel}</span>
+            <strong className="cv-hero-card-value">{copy.focusValue}</strong>
+            <span className="cv-hero-card-text">{copy.focusText}</span>
           </div>
 
-          <div style={{ ...styles.heroMiniCard, ...styles.heroContactCard }}>
-            <span style={styles.heroCardLabel}>{copy.contactLabel}</span>
+          <div className="cv-hero-mini-card cv-hero-contact-card">
+            <span className="cv-hero-card-label">{copy.contactLabel}</span>
             <div style={styles.contactItem}>
               <span>📍</span>
               <span>{t.location}</span>
