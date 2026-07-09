@@ -16,8 +16,18 @@ export function ExperienceSection({ id, title, items, styles, lang }) {
   const intro = EXPERIENCE_INTROS[id]?.[lang]
 
   return (
-    <Section id={id} title={title} styles={styles}>
-      {intro && <p style={{ ...styles.paragraph, marginBottom: '1.1rem' }}>{intro}</p>}
+    <Section id={id} title={title} styles={styles} plain>
+      {intro && (
+        <p
+          style={{
+            ...styles.paragraph,
+            marginBottom: '1.15rem',
+            maxWidth: '980px',
+          }}
+        >
+          {intro}
+        </p>
+      )}
       <Timeline items={items} styles={styles} lang={lang} />
     </Section>
   )
