@@ -1,4 +1,4 @@
-export const PDF_FILE_NAME = 'CV_2025.pdf'
+export const PDF_FILE_NAME = 'CV_Francisco_Palacios_Chaves_2026.pdf'
 export const GITHUB_USERNAME = 'fpalacioschaves'
 export const GITHUB_PROFILE_URL = 'https://github.com/fpalacioschaves'
 export const LINKEDIN_URL = 'https://linkedin.com/in/fpalacioschaves'
