@@ -1,6 +1,11 @@
-// src/config.js
 export const PDF_FILE_NAME = 'CV_2025.pdf'
 export const GITHUB_USERNAME = 'fpalacioschaves'
-export const VITE_EMAILJS_SERVICE_ID= 'service_rk7tymb'
-export const VITE_EMAILJS_TEMPLATE_ID= 'template_r0tsahf'
-export const VITE_EMAILJS_PUBLIC_KEY= 'BDxBDVlfYD3VNQKTi'
+export const GITHUB_PROFILE_URL = 'https://github.com/fpalacioschaves'
+export const LINKEDIN_URL = 'https://linkedin.com/in/fpalacioschaves'
+export const CONTACT_EMAIL = 'fpalacioschaves@gmail.com'
+export const CONTACT_PHONE_DISPLAY = '+34 655 92 54 98'
+export const CONTACT_PHONE_LINK = 'tel:+34655925498'
+
+export const VITE_EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || ''
+export const VITE_EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || ''
+export const VITE_EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || ''

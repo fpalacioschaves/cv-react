@@ -1,4 +1,3 @@
-// src/data/education.js
 export const education = [
   {
     title: {
@@ -9,7 +8,6 @@ export const education = [
       es: 'Universidad de Málaga',
       en: 'University of Málaga',
     },
-    extra: '',
   },
   {
     title: {
@@ -24,21 +22,28 @@ export const education = [
   },
   {
     title: {
-      es: 'LEARN ANGULAR FROM SCRATCH',
-      en: 'LEARN ANGULAR FROM SCRATCH',
+      es: 'ICAgile Certified Professional',
+      en: 'ICAgile Certified Professional',
+    },
+    center: { es: 'ICAgile', en: 'ICAgile' },
+  },
+  {
+    title: {
+      es: 'Angular desde cero',
+      en: 'Angular from scratch',
     },
     center: { es: 'Udemy', en: 'Udemy' },
   },
   {
     title: {
-      es: 'HTML TEMPLATE CONVERSION TO ANGULAR4',
-      en: 'HTML TEMPLATE CONVERSION TO ANGULAR4',
+      es: 'Conversión de plantillas HTML a Angular',
+      en: 'HTML template conversion to Angular',
     },
     center: { es: 'Udemy', en: 'Udemy' },
   },
   {
     title: {
-      es: 'COMERCIO ELECTRÓNICO',
+      es: 'Comercio electrónico',
       en: 'E-commerce',
     },
     center: { es: 'Ánfora Formación', en: 'Ánfora Formación' },
@@ -52,16 +57,9 @@ export const education = [
   },
   {
     title: {
-      es: 'Diseño web para la creación de contenidos de formación e-learning',
+      es: 'Diseño web para creación de contenidos e-learning',
       en: 'Web design for creating e-learning content',
     },
     center: { es: 'Grupo Antakira', en: 'Grupo Antakira' },
-  },
-  {
-    title: {
-      es: 'ICAgile Certified Professional',
-      en: 'ICAgile Certified Professional',
-    },
-    center: { es: 'ICAgile', en: 'ICAgile' },
   },
 ]

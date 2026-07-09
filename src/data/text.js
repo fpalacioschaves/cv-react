@@ -1,15 +1,24 @@
-// src/data/text.js
 export const TEXT = {
   es: {
-    chip: 'Currículum Vitae',
+    chip: 'Currículum Vitae interactivo',
     headline:
-      'Profesor de Desarrollo de Aplicaciones Web y Multiplataforma · Programador PHP & WordPress',
-    badge: 'Disponible para colaboración docente y desarrollo web',
+      'Docente técnico en DAW/DAM · Desarrollador PHP, WordPress y React · Especialista en bases de datos',
+    heroSummary:
+      'Combino experiencia real en desarrollo web con una trayectoria docente orientada a proyectos, acompañamiento del alumnado y creación de materiales técnicos claros.',
+    badge: 'Disponible para colaboración docente, formación técnica y desarrollo web',
     profileTitle: 'Perfil profesional',
     profileP1:
-      'Licenciado en Matemáticas con especialidad en Estadística, con amplia experiencia como programador PHP y administrador de sitios desarrollados en WordPress (creación de plugins y themes), y una sólida trayectoria como profesor y formador en el ámbito TIC.',
+      'Licenciado en Matemáticas, especialidad Estadística, con experiencia profesional como desarrollador PHP/WordPress y trayectoria consolidada como docente de Formación Profesional en ciclos DAM/DAW.',
     profileP2:
-      'Combino una fuerte base técnica con vocación docente, experiencia en certificados de profesionalidad y ciclos de Formación Profesional, y un enfoque muy práctico orientado a que el alumnado construya proyectos reales desde el primer día.',
+      'Mi perfil une tres áreas que se refuerzan entre sí: programación web, bases de datos y enseñanza técnica. Esto me permite explicar contenidos complejos desde la práctica, con ejemplos reales y orientación a producto.',
+    profileP3:
+      'Trabajo especialmente bien en contextos donde hay que convertir tecnología en aprendizaje: programación, SQL, desarrollo web, WordPress, proyectos de aula, documentación técnica y acompañamiento de trabajos finales.',
+    profileHighlights: [
+      { label: 'Perfil', value: 'Docente técnico + desarrollador web' },
+      { label: 'Áreas fuertes', value: 'BD, PHP, WordPress, React y formación TIC' },
+      { label: 'Ubicación', value: 'Málaga · modalidad presencial y online' },
+      { label: 'Enfoque', value: 'Aprendizaje práctico, proyectos y documentación clara' },
+    ],
     teachingTitle: 'Experiencia docente',
     devTitle: 'Experiencia como programador',
     educationTitle: 'Formación académica y complementaria',
@@ -17,9 +26,9 @@ export const TEXT = {
     softTitle: 'Competencias personales',
     techTitle: 'Tecnologías',
     langsTitle: 'Idiomas',
-    lastUpdate: 'Última actualización: 2025',
-    spaVersion: 'Versión SPA desarrollada con React.',
-    location: '29011 · Málaga (España)',
+    lastUpdate: 'Última actualización: 2026',
+    spaVersion: 'SPA desarrollada con React y Vite.',
+    location: 'Málaga (España)',
     downloadPdf: 'Descargar CV en PDF',
     themeLabel: 'Tema',
     themeDark: 'Oscuro',
@@ -27,15 +36,19 @@ export const TEXT = {
     langLabel: 'Idioma',
     langEs: 'ES',
     langEn: 'EN',
-    projectsTitle: 'Proyectos en GitHub',
+    projectsTitle: 'Proyectos destacados',
+    projectsIntro:
+      'Selección de proyectos propios que muestran mi perfil mixto: desarrollo web, herramientas educativas y uso de tecnologías modernas aplicadas a problemas reales.',
+    latestReposTitle: 'Repositorios recientes',
     projectsFallback:
-      'Puedes ver una selección de mis repositorios públicos en GitHub, o consultar el resto en mi perfil:',
+      'No se han podido cargar ahora los repositorios recientes de GitHub, pero los proyectos destacados siguen disponibles.',
     viewOnGithub: 'Ver en GitHub',
     contactTitle: 'Contacto y disponibilidad',
     contactIntro1:
       'Estoy abierto a colaboración docente en ciclos formativos, certificados de profesionalidad, formación para empresas y proyectos de desarrollo web.',
     contactIntro2:
-      'Si quieres que hablemos de un proyecto concreto, puedes usar este formulario o escribirme directamente a fpalacioschaves@gmail.com.',
+      'Puedo aportar especialmente en programación, bases de datos, WordPress, materiales didácticos técnicos y proyectos educativos con componente software.',
+    contactDirect: 'También puedes escribirme directamente a',
     contactNameLabel: 'Nombre',
     contactEmailLabel: 'Correo electrónico',
     contactMessageLabel: 'Mensaje',
@@ -43,19 +56,34 @@ export const TEXT = {
     contactEmailPlaceholder: 'tuemail@ejemplo.com',
     contactMessagePlaceholder: 'Cuéntame brevemente en qué estás pensando…',
     contactSubmit: 'Enviar mensaje',
+    contactSending: '⏳ Enviando...',
     contactError: 'Por favor, rellena nombre, correo y mensaje antes de enviar.',
-    contactOk:
-      'He abierto tu gestor de correo con el mensaje preparado. Si no lo ves, también puedes escribir a fpalacioschaves@gmail.com.',
+    contactConfigError:
+      'El formulario necesita configurar EmailJS en las variables de entorno. Mientras tanto, puedes escribirme directamente por correo.',
+    contactSendError:
+      'Ha ocurrido un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde o escríbeme directamente por correo.',
+    contactOk: 'Mensaje enviado correctamente. Gracias por contactar.',
   },
   en: {
-    chip: 'Curriculum Vitae',
-    headline: 'Web & Mobile Applications Teacher · PHP & WordPress Developer',
-    badge: 'Available for teaching collaboration and web development',
+    chip: 'Interactive résumé',
+    headline:
+      'Vocational IT teacher · PHP, WordPress & React developer · Databases specialist',
+    heroSummary:
+      'I combine real web development experience with a teaching career focused on projects, student guidance and clear technical learning materials.',
+    badge: 'Available for teaching collaboration, technical training and web development',
     profileTitle: 'Professional profile',
     profileP1:
-      'Mathematics graduate specialised in Statistics, with extensive experience as a PHP developer and WordPress site administrator (plugin and theme creation), and a solid track record as an IT trainer and teacher.',
+      'Mathematics graduate specialised in Statistics, with professional experience as a PHP/WordPress developer and a solid teaching background in vocational DAM/DAW programmes.',
     profileP2:
-      'I combine a strong technical background with a clear teaching vocation, experience in vocational training and professional certificates, and a very practical, project-oriented approach so that students build real applications from day one.',
+      'My profile connects three complementary areas: web development, databases and technical education. This allows me to explain complex content from practice, using real examples and a product-oriented mindset.',
+    profileP3:
+      'I work especially well in contexts where technology must become learning: programming, SQL, web development, WordPress, classroom projects, technical documentation and final project mentoring.',
+    profileHighlights: [
+      { label: 'Profile', value: 'Technical teacher + web developer' },
+      { label: 'Strong areas', value: 'Databases, PHP, WordPress, React and IT training' },
+      { label: 'Location', value: 'Málaga · on-site and online' },
+      { label: 'Approach', value: 'Hands-on learning, projects and clear documentation' },
+    ],
     teachingTitle: 'Teaching experience',
     devTitle: 'Developer experience',
     educationTitle: 'Education and training',
@@ -63,25 +91,29 @@ export const TEXT = {
     softTitle: 'Soft skills',
     techTitle: 'Technologies',
     langsTitle: 'Languages',
-    lastUpdate: 'Last update: 2025',
-    spaVersion: 'SPA version built with React.',
-    location: '29011 · Málaga (Spain)',
-    downloadPdf: 'Download CV as PDF',
+    lastUpdate: 'Last update: 2026',
+    spaVersion: 'SPA built with React and Vite.',
+    location: 'Málaga (Spain)',
+    downloadPdf: 'Download PDF résumé',
     themeLabel: 'Theme',
     themeDark: 'Dark',
     themeLight: 'Light',
     langLabel: 'Language',
     langEs: 'ES',
     langEn: 'EN',
-    projectsTitle: 'GitHub projects',
+    projectsTitle: 'Featured projects',
+    projectsIntro:
+      'A selection of personal projects showing my hybrid profile: web development, educational tools and modern technologies applied to real problems.',
+    latestReposTitle: 'Recent repositories',
     projectsFallback:
-      'Here you can see a selection of my public repositories on GitHub, or visit my full profile:',
+      'Recent GitHub repositories could not be loaded right now, but featured projects are still available.',
     viewOnGithub: 'View on GitHub',
     contactTitle: 'Contact & availability',
     contactIntro1:
       'I am open to teaching collaborations in vocational training, professional certificates, corporate training and web development projects.',
     contactIntro2:
-      'If you would like to discuss a specific project, you can use this form or email me directly at fpalacioschaves@gmail.com.',
+      'I can contribute especially in programming, databases, WordPress, technical learning materials and software-based educational projects.',
+    contactDirect: 'You can also email me directly at',
     contactNameLabel: 'Name',
     contactEmailLabel: 'Email',
     contactMessageLabel: 'Message',
@@ -89,8 +121,12 @@ export const TEXT = {
     contactEmailPlaceholder: 'youremail@example.com',
     contactMessagePlaceholder: 'Briefly tell me what you have in mind…',
     contactSubmit: 'Send message',
+    contactSending: '⏳ Sending...',
     contactError: 'Please fill in name, email and message before sending.',
-    contactOk:
-      'I have opened your email client with the message ready. If you do not see it, you can also write to fpalacioschaves@gmail.com.',
+    contactConfigError:
+      'The form needs EmailJS environment variables to be configured. In the meantime, you can email me directly.',
+    contactSendError:
+      'There was an error sending your message. Please try again later or email me directly.',
+    contactOk: 'Message sent successfully. Thank you for getting in touch.',
   },
 }
