@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fpalacioschaves.github.io/cv-react/sitemap.xml
