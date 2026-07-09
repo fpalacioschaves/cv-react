@@ -19,7 +19,7 @@ export function Header({
   const copy =
     lang === 'es'
       ? {
-          heroKicker: 'Docencia técnica · Desarrollo web · Bases de datos',
+          heroKicker: 'Docencia técnica · Desarrollo web · Proyectos educativos',
           heroPromise:
             'Ayudo a convertir tecnología compleja en aprendizaje claro, proyectos útiles y soluciones web mantenibles.',
           roleLabel: 'Perfil híbrido',
@@ -33,7 +33,7 @@ export function Header({
           contactLabel: 'Contacto rápido',
         }
       : {
-          heroKicker: 'Technical teaching · Web development · Databases',
+          heroKicker: 'Technical teaching · Web development · Educational projects',
           heroPromise:
             'I help turn complex technology into clear learning, useful projects and maintainable web solutions.',
           roleLabel: 'Hybrid profile',
