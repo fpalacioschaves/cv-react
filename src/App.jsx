@@ -169,7 +169,7 @@ export default function App() {
       return
     }
 
-    const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
     if (reducedMotion) return
 
     document.documentElement.classList.add('reveal-enabled')
@@ -193,7 +193,7 @@ export default function App() {
     )
 
     revealElements.forEach((element, index) => {
-      element.style.setProperty('--reveal-index', String(index % 6))
+      element.style.setProperty('--reveal-delay', `${(index % 6) * 55}ms`)
 
       const rect = element.getBoundingClientRect()
       if (rect.top < window.innerHeight * 0.92) {
