@@ -93,10 +93,16 @@ export function Header({
         <section style={styles.heroContent} className="cv-hero-main">
           <p className="cv-hero-kicker">{copy.heroKicker}</p>
 
-          <h1 style={styles.name}>Francisco Palacios&nbsp;Chaves</h1>
-          <p style={styles.subtitle}>{t.headline}</p>
+          <h1 style={styles.name} className="cv-hero-name">
+            Francisco Palacios&nbsp;Chaves
+          </h1>
+          <p style={styles.subtitle} className="cv-hero-headline">
+            {t.headline}
+          </p>
           <p className="cv-hero-promise">{copy.heroPromise}</p>
-          <p style={styles.heroSummary}>{t.heroSummary}</p>
+          <p style={styles.heroSummary} className="cv-hero-summary">
+            {t.heroSummary}
+          </p>
 
           <div className="cv-hero-stack-pills" aria-label="Tecnologías principales">
             {MAIN_STACK.map((item) => (
