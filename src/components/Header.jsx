@@ -55,7 +55,7 @@ export function Header({
 
   return (
     <>
-      <div style={styles.topBar}>
+      <div style={styles.topBar} className="cv-top-bar">
         <div style={styles.topBarGroup}>
           <span style={styles.toggleLabel}>{t.themeLabel}</span>
           <button
