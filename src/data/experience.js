@@ -24,28 +24,6 @@ export const teachingExperience = [
     },
   },
   {
-    period: { es: 'Jul 2025 – Actualidad', en: 'Jul 2025 – Present' },
-    role: {
-      es: 'Monitor curso Big Data & BI',
-      en: 'Instructor – Big Data & BI',
-    },
-    org: 'CENEC',
-    location: {
-      es: 'Málaga',
-      en: 'Málaga',
-    },
-    bullets: {
-      es: [
-        'Docencia del curso IFCT153PO Introducción al Big Data y Business Intelligence.',
-        'Trabajo con conceptos de análisis de datos, visualización, interpretación de información y herramientas BI.',
-      ],
-      en: [
-        'Teaching the IFCT153PO Introduction to Big Data and Business Intelligence course.',
-        'Working with data analysis, visualisation, information interpretation and BI tools.',
-      ],
-    },
-  },
-  {
     period: { es: 'Abr 2026 – Jul 2026', en: 'Apr 2026 – Jul 2026' },
     role: {
       es: 'Monitor del Curso de Fullstack Web Developer con JavaScript',
@@ -108,6 +86,28 @@ export const teachingExperience = [
       en: [
         'Delivery of full-stack JavaScript training for web application development.',
         'Preparation and monitoring of practical activities focused on frontend/backend development learning.',
+      ],
+    },
+  },
+  {
+    period: { es: 'Jul 2025 – Ago 2025', en: 'Jul 2025 – Aug 2025' },
+    role: {
+      es: 'Monitor curso Big Data & BI',
+      en: 'Instructor – Big Data & BI',
+    },
+    org: 'CENEC',
+    location: {
+      es: 'Málaga',
+      en: 'Málaga',
+    },
+    bullets: {
+      es: [
+        'Docencia del curso IFCT153PO Introducción al Big Data y Business Intelligence.',
+        'Trabajo con conceptos de análisis de datos, visualización, interpretación de información y herramientas BI.',
+      ],
+      en: [
+        'Teaching the IFCT153PO Introduction to Big Data and Business Intelligence course.',
+        'Working with data analysis, visualisation, information interpretation and BI tools.',
       ],
     },
   },
