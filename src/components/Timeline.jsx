@@ -16,7 +16,11 @@ export function Timeline({ items, styles, lang }) {
               paddingBottom: index === items.length - 1 ? 0 : '0.15rem',
               borderBottom: 'none',
             }}
-            className={isCurrent ? 'cv-timeline-item cv-timeline-item-current' : 'cv-timeline-item'}
+            className={
+              isCurrent
+                ? 'cv-timeline-item cv-timeline-item-current cv-reveal-card'
+                : 'cv-timeline-item cv-reveal-card'
+            }
           >
             <div
               style={{
