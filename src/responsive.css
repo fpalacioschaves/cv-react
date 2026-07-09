@@ -17,6 +17,19 @@
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 
+  .cv-profile-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cv-profile-text,
+  .cv-profile-facts {
+    min-width: 0;
+  }
+
+  .cv-profile-facts {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  }
+
   .cv-project-card-featured .cv-project-title {
     font-size: clamp(1.35rem, 7vw, 1.75rem) !important;
   }
@@ -40,6 +53,17 @@
 
   section > div {
     padding: 1rem !important;
+  }
+
+  .cv-profile-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .cv-profile-facts {
+    grid-template-columns: 1fr !important;
+    gap: 0.55rem !important;
   }
 
   .cv-hero-kicker {
