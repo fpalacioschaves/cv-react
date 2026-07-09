@@ -71,6 +71,145 @@ section h2::after {
   background: linear-gradient(90deg, #38bdf8, rgba(37, 99, 235, 0.12));
 }
 
+@media screen {
+  .cv-hero-main {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cv-hero-main::after {
+    content: "";
+    position: absolute;
+    right: -6rem;
+    top: -6rem;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.18), transparent 68%);
+    pointer-events: none;
+  }
+
+  .cv-hero-topline,
+  .cv-hero-actions,
+  .cv-hero-stack-pills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem;
+  }
+
+  .cv-hero-topline {
+    justify-content: space-between;
+    margin-bottom: 0.9rem;
+  }
+
+  .cv-hero-availability {
+    max-width: 26rem;
+    border-radius: 999px;
+    border: 1px solid rgba(20, 184, 166, 0.5);
+    padding: 0.3rem 0.7rem;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    color: #0f766e;
+    background: rgba(20, 184, 166, 0.1);
+  }
+
+  .cv-hero-stack-block {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.24);
+  }
+
+  .cv-hero-stack-label,
+  .cv-hero-card-label {
+    display: block;
+    margin-bottom: 0.45rem;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 800;
+    color: #64748b;
+  }
+
+  .cv-hero-stack-pill {
+    border-radius: 999px;
+    border: 1px solid rgba(96, 165, 250, 0.45);
+    padding: 0.22rem 0.62rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #1d4ed8;
+    background: rgba(37, 99, 235, 0.08);
+  }
+
+  .cv-hero-side {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .cv-hero-mini-card {
+    border: 1px solid rgba(148, 163, 184, 0.42);
+    border-radius: 1.1rem;
+    padding: 1rem;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 55%),
+      rgba(255, 255, 255, 0.9);
+  }
+
+  .cv-hero-card-value {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 1rem;
+    line-height: 1.35;
+    color: #0f172a;
+  }
+
+  .cv-hero-card-text {
+    display: block;
+    font-size: 0.86rem;
+    line-height: 1.5;
+    color: #475569;
+  }
+
+  .cv-hero-contact-card {
+    display: grid;
+    gap: 0.2rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .cv-hero-availability {
+      color: #99f6e4;
+      background: rgba(20, 184, 166, 0.16);
+      border-color: rgba(45, 212, 191, 0.45);
+    }
+
+    .cv-hero-stack-label,
+    .cv-hero-card-label {
+      color: #94a3b8;
+    }
+
+    .cv-hero-stack-pill {
+      color: #bfdbfe;
+      background: rgba(37, 99, 235, 0.18);
+      border-color: rgba(96, 165, 250, 0.48);
+    }
+
+    .cv-hero-mini-card {
+      background:
+        linear-gradient(135deg, rgba(96, 165, 250, 0.09), transparent 55%),
+        rgba(15, 23, 42, 0.86);
+      border-color: rgba(71, 85, 105, 0.92);
+    }
+
+    .cv-hero-card-value {
+      color: #e5e7eb;
+    }
+
+    .cv-hero-card-text {
+      color: #94a3b8;
+    }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
