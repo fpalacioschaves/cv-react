@@ -164,6 +164,48 @@ export default function App() {
     return () => observer.disconnect()
   }, [navLinks])
 
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') {
+      return
+    }
+
+    const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    if (reducedMotion) return
+
+    document.documentElement.classList.add('reveal-enabled')
+
+    const revealElements = Array.from(document.querySelectorAll('.cv-reveal, .cv-reveal-card'))
+    if (revealElements.length === 0) return
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            revealObserver.unobserve(entry.target)
+          }
+        })
+      },
+      {
+        rootMargin: '0px 0px -8% 0px',
+        threshold: 0.12,
+      },
+    )
+
+    revealElements.forEach((element, index) => {
+      element.style.setProperty('--reveal-index', String(index % 6))
+
+      const rect = element.getBoundingClientRect()
+      if (rect.top < window.innerHeight * 0.92) {
+        element.classList.add('is-visible')
+      } else {
+        revealObserver.observe(element)
+      }
+    })
+
+    return () => revealObserver.disconnect()
+  }, [lang, latestProjects.length])
+
   const toggleTheme = () => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
   const toggleLang = () => setLang((prev) => (prev === 'es' ? 'en' : 'es'))
 
