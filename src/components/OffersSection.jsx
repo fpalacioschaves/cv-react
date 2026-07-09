@@ -35,7 +35,12 @@ export function OffersSection({ offersText, styles }) {
           'Aporto un perfil híbrido que combina docencia técnica, desarrollo web, documentación clara y orientación a proyectos reales.'}
       </p>
 
-      <div style={styles.offersColumns}>
+      <div
+        style={{
+          ...styles.offersColumns,
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
+        }}
+      >
         {cards.map((card) => (
           <article key={card.title} style={styles.quickFact}>
             <div style={styles.offersTitle}>{card.title}</div>
