@@ -1,0 +1,19 @@
+{
+  "name": "Francisco Palacios Chaves · CV",
+  "short_name": "F. Palacios CV",
+  "description": "CV profesional de Francisco Palacios Chaves: docente FP TIC y desarrollador web.",
+  "lang": "es",
+  "start_url": "/cv-react/",
+  "scope": "/cv-react/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "icons": [
+    {
+      "src": "/cv-react/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
