@@ -19,24 +19,28 @@ export function Header({
   const copy =
     lang === 'es'
       ? {
-          stackLabel: 'Stack principal',
+          heroKicker: 'Docencia técnica · Desarrollo web · Bases de datos',
+          heroPromise:
+            'Ayudo a convertir tecnología compleja en aprendizaje claro, proyectos útiles y soluciones web mantenibles.',
           roleLabel: 'Perfil híbrido',
           roleValue: 'Docente FP + desarrollador web',
           roleText:
             'Experiencia en aula, programación, bases de datos, WordPress y proyectos técnicos reales.',
-          focusLabel: 'Foco de trabajo',
+          focusLabel: 'Qué puedo aportar',
           focusValue: 'Formación TIC con mentalidad de producto',
           focusText:
             'Materiales claros, proyectos aplicados, documentación útil y soluciones mantenibles.',
           contactLabel: 'Contacto rápido',
         }
       : {
-          stackLabel: 'Core stack',
+          heroKicker: 'Technical teaching · Web development · Databases',
+          heroPromise:
+            'I help turn complex technology into clear learning, useful projects and maintainable web solutions.',
           roleLabel: 'Hybrid profile',
           roleValue: 'Vocational teacher + web developer',
           roleText:
             'Experience in the classroom, programming, databases, WordPress and real technical projects.',
-          focusLabel: 'Work focus',
+          focusLabel: 'What I bring',
           focusValue: 'IT training with a product mindset',
           focusText:
             'Clear materials, applied projects, useful documentation and maintainable solutions.',
@@ -87,24 +91,19 @@ export function Header({
 
       <header style={styles.header}>
         <section style={styles.heroContent} className="cv-hero-main">
-          <div className="cv-hero-topline">
-            <span style={styles.chip}>{t.chip}</span>
-            <span className="cv-hero-availability">{t.badge}</span>
-          </div>
+          <p className="cv-hero-kicker">{copy.heroKicker}</p>
 
           <h1 style={styles.name}>Francisco Palacios&nbsp;Chaves</h1>
           <p style={styles.subtitle}>{t.headline}</p>
+          <p className="cv-hero-promise">{copy.heroPromise}</p>
           <p style={styles.heroSummary}>{t.heroSummary}</p>
 
-          <div className="cv-hero-stack-block">
-            <span className="cv-hero-stack-label">{copy.stackLabel}</span>
-            <div className="cv-hero-stack-pills">
-              {MAIN_STACK.map((item) => (
-                <span key={item} className="cv-hero-stack-pill">
-                  {item}
-                </span>
-              ))}
-            </div>
+          <div className="cv-hero-stack-pills" aria-label="Tecnologías principales">
+            {MAIN_STACK.map((item) => (
+              <span key={item} className="cv-hero-stack-pill">
+                {item}
+              </span>
+            ))}
           </div>
 
           <div style={styles.heroActions} className="cv-hero-actions">
