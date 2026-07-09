@@ -8,17 +8,26 @@ function getLocalizedValue(value, lang) {
 function ProjectCard({ project, styles, lang, label, featured = false }) {
   const title = getLocalizedValue(project.name, lang)
   const description = getLocalizedValue(project.description, lang)
+  const eyebrow = getLocalizedValue(project.eyebrow, lang)
   const linkLabel = project.linkLabel?.[lang] || label
   const linkIcon = project.linkIcon || '🔗'
 
   return (
     <article
       style={styles.projectCard}
-      className={featured ? 'cv-project-card cv-project-card-featured' : 'cv-project-card'}
+      className={
+        featured
+          ? 'cv-project-card cv-project-card-featured cv-reveal-card'
+          : 'cv-project-card cv-reveal-card'
+      }
     >
       <div style={styles.projectTitleRow} className="cv-project-title-row">
         <div>
-          {featured && <span className="cv-project-eyebrow">Proyecto principal</span>}
+          {featured && (
+            <span className="cv-project-eyebrow">
+              {eyebrow || (lang === 'es' ? 'Proyecto estrella' : 'Flagship project')}
+            </span>
+          )}
           <div style={styles.projectTitle} className="cv-project-title">
             {title}
           </div>
@@ -33,7 +42,7 @@ function ProjectCard({ project, styles, lang, label, featured = false }) {
       )}
 
       {project.tags && (
-        <div style={styles.projectTags} className="cv-project-tags">
+        <div style={styles.projectTags} className="cv-project-tags" aria-label="Stack principal">
           {project.tags.map((tag) => (
             <span key={tag} style={styles.projectMiniTag} className="cv-project-tag">
               {tag}
