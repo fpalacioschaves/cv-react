@@ -8,16 +8,16 @@ export const TEXT = {
     badge: 'Disponible para colaboración docente, formación técnica y desarrollo web',
     profileTitle: 'Perfil profesional',
     profileP1:
-      'Licenciado en Matemáticas, especialidad Estadística, con experiencia profesional como desarrollador PHP/WordPress y trayectoria consolidada como docente de Formación Profesional en ciclos DAM/DAW.',
+      'Soy docente de Formación Profesional en DAM/DAW y desarrollador web, con una base matemática y experiencia real construyendo soluciones con PHP, WordPress, JavaScript, React, Node.js, SQL y herramientas de gestión de datos.',
     profileP2:
-      'Mi perfil une tres áreas que se refuerzan entre sí: programación web, bases de datos y enseñanza técnica. Esto me permite explicar contenidos complejos desde la práctica, con ejemplos reales y orientación a producto.',
+      'Mi valor está en la combinación: conozco el aula, conozco el código y sé convertir necesidades técnicas o educativas en materiales, aplicaciones, documentación y proyectos que se pueden usar de verdad.',
     profileP3:
-      'Trabajo especialmente bien en contextos donde hay que convertir tecnología en aprendizaje: programación, SQL, desarrollo web, WordPress, proyectos de aula, documentación técnica y acompañamiento de trabajos finales.',
+      'Trabajo especialmente bien en entornos donde hay que ordenar problemas complejos, explicar tecnología con claridad, acompañar al alumnado o transformar procesos académicos en soluciones digitales mantenibles.',
     profileHighlights: [
-      { label: 'Perfil', value: 'Docente técnico + desarrollador web' },
-      { label: 'Áreas fuertes', value: 'BD, PHP, WordPress, React, Node y formación TIC' },
+      { label: 'Perfil', value: 'Docente FP + desarrollador web' },
+      { label: 'Áreas fuertes', value: 'Desarrollo web, WordPress, datos, documentación y FP TIC' },
       { label: 'Ubicación', value: 'Málaga · modalidad presencial y online' },
-      { label: 'Enfoque', value: 'Aprendizaje práctico, proyectos, documentación y producto' },
+      { label: 'Enfoque', value: 'Aprender haciendo, proyectos reales y soluciones mantenibles' },
     ],
     teachingTitle: 'Experiencia docente',
     devTitle: 'Experiencia como programador',
@@ -74,16 +74,16 @@ export const TEXT = {
     badge: 'Available for teaching collaboration, technical training and web development',
     profileTitle: 'Professional profile',
     profileP1:
-      'Mathematics graduate specialised in Statistics, with professional experience as a PHP/WordPress developer and a solid teaching background in vocational DAM/DAW programmes.',
+      'I am a vocational DAM/DAW teacher and web developer, with a mathematics background and real experience building solutions with PHP, WordPress, JavaScript, React, Node.js, SQL and data management tools.',
     profileP2:
-      'My profile connects three complementary areas: web development, databases and technical education. This allows me to explain complex content from practice, using real examples and a product-oriented mindset.',
+      'My value lies in the combination: I know the classroom, I know the code, and I can turn technical or educational needs into materials, applications, documentation and projects that can actually be used.',
     profileP3:
-      'I work especially well in contexts where technology must become learning: programming, SQL, web development, WordPress, classroom projects, technical documentation and final project mentoring.',
+      'I work especially well in contexts where complex problems need to be organised, technology needs to be explained clearly, students need guidance, or academic processes need to become maintainable digital solutions.',
     profileHighlights: [
-      { label: 'Profile', value: 'Technical teacher + web developer' },
-      { label: 'Strong areas', value: 'Databases, PHP, WordPress, React, Node and IT training' },
+      { label: 'Profile', value: 'Vocational teacher + web developer' },
+      { label: 'Strong areas', value: 'Web development, WordPress, data, documentation and IT training' },
       { label: 'Location', value: 'Málaga · on-site and online' },
-      { label: 'Approach', value: 'Hands-on learning, projects, documentation and product' },
+      { label: 'Approach', value: 'Learning by doing, real projects and maintainable solutions' },
     ],
     teachingTitle: 'Teaching experience',
     devTitle: 'Developer experience',
