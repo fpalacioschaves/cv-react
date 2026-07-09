@@ -5,6 +5,7 @@ import App from './App.jsx'
 import './index.css'
 import './responsive.css'
 import './accessibility.css'
+import './visual-polish.css'
 import './print.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
