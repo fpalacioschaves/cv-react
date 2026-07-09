@@ -58,6 +58,7 @@ export function SkillsSection({ t, styles, lang, skills }) {
       <p style={{ ...styles.paragraph, marginBottom: '1.15rem' }}>{intro}</p>
 
       <div
+        className="cv-skill-map"
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
@@ -66,10 +67,10 @@ export function SkillsSection({ t, styles, lang, skills }) {
         }}
       >
         {SKILL_CLUSTERS[lang].map((cluster) => (
-          <article key={cluster.title} style={styles.quickFact}>
+          <article key={cluster.title} style={styles.quickFact} className="cv-skill-card">
             <span style={styles.quickFactLabel}>{cluster.title}</span>
             <span style={styles.quickFactValue}>{cluster.description}</span>
-            <div style={styles.pillRow}>
+            <div style={styles.pillRow} className="cv-skill-pills">
               {cluster.items.map((item) => (
                 <span key={item} style={styles.pill}>
                   {item}
@@ -80,7 +81,7 @@ export function SkillsSection({ t, styles, lang, skills }) {
         ))}
       </div>
 
-      <div style={styles.skillColumns}>
+      <div style={styles.skillColumns} className="cv-skill-details">
         <div>
           <div style={styles.skillGroupTitle}>{t.softTitle}</div>
           <ul style={styles.skillList}>
@@ -92,9 +93,9 @@ export function SkillsSection({ t, styles, lang, skills }) {
           </ul>
         </div>
 
-        <div>
+        <div className="cv-skill-tech-full">
           <div style={styles.skillGroupTitle}>{t.techTitle}</div>
-          <div style={styles.pillRow}>
+          <div style={styles.pillRow} className="cv-skill-pills">
             {skills.tech[lang].map((skill) => (
               <span key={skill} style={styles.pill}>
                 {skill}
