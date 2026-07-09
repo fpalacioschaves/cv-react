@@ -8,6 +8,7 @@ function splitPoints(points) {
 export function OffersSection({ offersText, styles }) {
   const [teacherMain, teacherExtra] = splitPoints(offersText.teacherPoints)
   const [devMain, devExtra] = splitPoints(offersText.devPoints)
+  const availableItems = offersText.availableItems || []
 
   const cards = [
     {
@@ -34,6 +35,26 @@ export function OffersSection({ offersText, styles }) {
         {offersText.intro ||
           'Aporto un perfil híbrido que combina docencia técnica, desarrollo web, documentación clara y orientación a proyectos reales.'}
       </p>
+
+      {availableItems.length > 0 && (
+        <aside
+          className="cv-availability-block"
+          aria-label={offersText.availableTitle || 'Disponible para'}
+          style={{
+            ...styles.quickFact,
+            marginBottom: '1.15rem',
+          }}
+        >
+          <div style={styles.offersTitle}>{offersText.availableTitle || 'Disponible para'}</div>
+          <div className="cv-availability-list">
+            {availableItems.map((item) => (
+              <span key={item} className="cv-availability-pill">
+                {item}
+              </span>
+            ))}
+          </div>
+        </aside>
+      )}
 
       <div
         style={{
