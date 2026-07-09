@@ -1,0 +1,136 @@
+@media screen and (max-width: 920px) {
+  .cv-hero-main {
+    padding: 1.55rem !important;
+  }
+
+  .cv-hero-name {
+    font-size: clamp(2.45rem, 12vw, 4rem) !important;
+    line-height: 0.96 !important;
+    letter-spacing: -0.065em !important;
+  }
+
+  .cv-hero-promise {
+    font-size: clamp(1.05rem, 4vw, 1.25rem) !important;
+  }
+
+  .cv-hero-side {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .cv-project-card-featured .cv-project-title {
+    font-size: clamp(1.35rem, 7vw, 1.75rem) !important;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  section h2 {
+    gap: 0.55rem;
+    font-size: 0.95rem !important;
+    line-height: 1.25;
+  }
+
+  section h2::after {
+    width: 2.8rem;
+  }
+
+  .cv-hero-kicker {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  .cv-hero-headline,
+  .cv-hero-summary {
+    font-size: 0.95rem !important;
+  }
+
+  .cv-hero-actions > *,
+  .cv-hero-stack-pill {
+    font-size: 0.78rem !important;
+  }
+
+  .cv-hero-mini-card,
+  .cv-project-card,
+  .cv-project-card-featured,
+  .cv-timeline-content {
+    border-radius: 0.95rem !important;
+  }
+
+  .cv-project-title-row {
+    gap: 0.7rem;
+    align-items: flex-start !important;
+  }
+
+  .cv-timeline-item {
+    grid-template-columns: 24px minmax(0, 1fr) !important;
+    gap: 0.55rem !important;
+  }
+
+  .cv-timeline-marker-col {
+    padding-top: 0.95rem !important;
+  }
+
+  .cv-timeline-period {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+  }
+
+  .cv-timeline-period span {
+    margin-left: 0 !important;
+  }
+
+  .cv-timeline-bullets {
+    padding-left: 1rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .cv-hero-main {
+    padding: 1.25rem !important;
+  }
+
+  .cv-hero-name {
+    font-size: clamp(2.15rem, 13vw, 3.1rem) !important;
+    letter-spacing: -0.055em !important;
+  }
+
+  .cv-hero-promise {
+    margin-top: 0.9rem !important;
+  }
+
+  .cv-hero-stack-pills {
+    padding-top: 0.85rem !important;
+  }
+
+  .cv-hero-actions {
+    gap: 0.45rem !important;
+  }
+
+  .cv-hero-actions > * {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cv-project-card-featured {
+    padding: 1.05rem !important;
+  }
+
+  .cv-project-card-featured::after,
+  .cv-hero-main::after {
+    opacity: 0.65;
+  }
+
+  .cv-timeline-item {
+    grid-template-columns: 20px minmax(0, 1fr) !important;
+  }
+
+  .cv-timeline-content {
+    padding: 0.85rem !important;
+  }
+
+  .cv-timeline-bullets li {
+    margin-bottom: 0.35rem !important;
+  }
+}
