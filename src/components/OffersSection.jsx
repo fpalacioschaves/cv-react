@@ -1,26 +1,51 @@
 import { Section } from './Section'
 
+function splitPoints(points) {
+  const middle = Math.ceil(points.length / 2)
+  return [points.slice(0, middle), points.slice(middle)]
+}
+
 export function OffersSection({ offersText, styles }) {
+  const [teacherMain, teacherExtra] = splitPoints(offersText.teacherPoints)
+  const [devMain, devExtra] = splitPoints(offersText.devPoints)
+
+  const cards = [
+    {
+      title: offersText.teacherTitle,
+      points: teacherMain,
+    },
+    {
+      title: offersText.devTitle,
+      points: devMain,
+    },
+    {
+      title: offersText.materialsTitle || 'Materiales y documentación',
+      points: teacherExtra,
+    },
+    {
+      title: offersText.projectsTitle || 'Proyectos y soluciones digitales',
+      points: devExtra,
+    },
+  ].filter((card) => card.points.length > 0)
+
   return (
     <Section id="ofrezco" title={offersText.title} styles={styles}>
-      <div style={styles.offersColumns}>
-        <div>
-          <div style={styles.offersTitle}>{offersText.teacherTitle}</div>
-          <ul style={styles.offersList}>
-            {offersText.teacherPoints.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
-        </div>
+      <p style={{ ...styles.paragraph, marginBottom: '1.15rem' }}>
+        {offersText.intro ||
+          'Aporto un perfil híbrido que combina docencia técnica, desarrollo web, documentación clara y orientación a proyectos reales.'}
+      </p>
 
-        <div>
-          <div style={styles.offersTitle}>{offersText.devTitle}</div>
-          <ul style={styles.offersList}>
-            {offersText.devPoints.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
-        </div>
+      <div style={styles.offersColumns}>
+        {cards.map((card) => (
+          <article key={card.title} style={styles.quickFact}>
+            <div style={styles.offersTitle}>{card.title}</div>
+            <ul style={styles.offersList}>
+              {card.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
     </Section>
   )
