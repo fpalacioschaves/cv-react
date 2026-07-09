@@ -2,6 +2,13 @@ export const offers = {
   es: {
     title: 'Qué puedo aportar',
     intro: 'Aporto un perfil híbrido que combina docencia técnica, desarrollo web, documentación clara y orientación a proyectos reales.',
+    availableTitle: 'Disponible para',
+    availableItems: [
+      'Docencia FP TIC en DAM/DAW',
+      'Formación técnica para empresas y entidades',
+      'Cursos full stack con JavaScript, React, Node.js, Java, PHP, WordPress y SQL',
+      'Desarrollo web y herramientas educativas mantenibles',
+    ],
     teacherTitle: 'Docencia técnica clara',
     devTitle: 'Desarrollo web mantenible',
     materialsTitle: 'Materiales y documentación',
@@ -22,6 +29,13 @@ export const offers = {
   en: {
     title: 'What I bring',
     intro: 'I bring a hybrid profile combining technical teaching, web development, clear documentation and a project-oriented mindset.',
+    availableTitle: 'Available for',
+    availableItems: [
+      'Vocational IT teaching for DAM/DAW programmes',
+      'Technical training for companies and organisations',
+      'Full-stack courses with JavaScript, React, Node.js, Java, PHP, WordPress and SQL',
+      'Maintainable web development and educational tools',
+    ],
     teacherTitle: 'Clear technical teaching',
     devTitle: 'Maintainable web development',
     materialsTitle: 'Materials and documentation',
