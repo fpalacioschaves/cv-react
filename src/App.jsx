@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import emailjs from '@emailjs/browser'
 
 import {
-  PDF_FILE_NAME,
   GITHUB_USERNAME,
   VITE_EMAILJS_SERVICE_ID,
   VITE_EMAILJS_TEMPLATE_ID,
@@ -27,7 +26,6 @@ import { SkillsSection } from './components/SkillsSection'
 import { ContactSection } from './components/ContactSection'
 import { Footer } from './components/Footer'
 
-const pdfUrl = `${import.meta.env.BASE_URL}${PDF_FILE_NAME}`
 const FEATURED_REPO_NAMES = new Set(['cv-react', 'safa-twin'])
 
 export default function App() {
@@ -237,7 +235,6 @@ export default function App() {
         <Header
           t={t}
           styles={styles}
-          pdfUrl={pdfUrl}
           theme={theme}
           lang={lang}
           onToggleTheme={toggleTheme}
