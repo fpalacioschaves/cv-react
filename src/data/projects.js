@@ -9,10 +9,14 @@ export const featuredProjects = [
       es: 'Ver repositorio',
       en: 'View repository',
     },
-    tags: ['Node.js', 'Express', 'Prisma', 'React', 'MySQL'],
+    eyebrow: {
+      es: 'Proyecto estrella · Gemelo digital educativo',
+      en: 'Flagship project · Educational digital twin',
+    },
+    tags: ['Node.js', 'Express', 'TypeScript', 'Prisma', 'MySQL', 'React', 'Vite'],
     description: {
-      es: 'Gemelo digital académico para gestión educativa en FP: estructura académica, alumnado, evaluaciones, formación en empresa, documentación, currículo RA/CE/AF y herramientas de apoyo a la gestión.',
-      en: 'Academic digital twin for vocational education management: academic structure, students, assessment, company training, documents, RA/CE/AF curriculum and management support tools.',
+      es: 'Gemelo digital académico para FP desarrollado como producto completo: gestión de estructura académica, alumnado, evaluaciones, formación en empresa, documentación, currículo RA/CE/AF y asistente interno para tareas de gestión educativa.',
+      en: 'Academic digital twin for vocational education, developed as a complete product: academic structure, students, assessment, company training, documents, RA/CE/AF curriculum and an internal assistant for educational management tasks.',
     },
   },
   {
