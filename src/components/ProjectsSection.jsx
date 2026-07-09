@@ -85,7 +85,7 @@ export function ProjectsSection({ t, styles, lang, featuredProjects, latestProje
         </div>
       )}
 
-      <div style={styles.latestProjectsBlock}>
+      <div style={styles.latestProjectsBlock} className="cv-latest-repos">
         <h3 style={styles.projectsSubTitle}>{t.latestReposTitle}</h3>
         {latestProjects.length === 0 ? (
           <p style={styles.paragraph}>{t.projectsFallback}</p>
