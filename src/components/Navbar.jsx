@@ -31,9 +31,12 @@ export function Navbar({
         ...(scrolled ? styles.navBarScrolled : null),
       }}
     >
-      <div style={styles.navBarInner}>
-        <div style={styles.navBrand}>CV · F. Palacios</div>
-
+      <div
+        style={{
+          ...styles.navBarInner,
+          justifyContent: isMobile ? 'flex-end' : 'center',
+        }}
+      >
         {isMobile ? (
           <button
             type="button"
