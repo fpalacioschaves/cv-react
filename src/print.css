@@ -115,9 +115,75 @@
     padding: 1.7mm !important;
   }
 
+  #ofrezco {
+    break-after: auto !important;
+    page-break-after: auto !important;
+  }
+
+  #ofrezco .cv-section-panel {
+    padding: 0 !important;
+  }
+
+  #ofrezco .cv-availability-block {
+    display: block !important;
+    padding: 1.4mm 1.8mm !important;
+    margin-bottom: 1.4mm !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  #ofrezco .cv-availability-kicker,
+  #ofrezco .cv-availability-intro,
+  #ofrezco .cv-availability-block::after {
+    display: none !important;
+  }
+
+  #ofrezco .cv-availability-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.7mm !important;
+    margin-top: 0.8mm !important;
+  }
+
+  #ofrezco .cv-availability-pill {
+    font-size: 6.8pt !important;
+    line-height: 1.05 !important;
+    padding: 0.35mm 1mm !important;
+  }
+
+  #ofrezco [style*="grid-template-columns"] {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.4mm !important;
+  }
+
+  #ofrezco .cv-offer-card {
+    padding: 1.4mm 1.8mm !important;
+    margin: 0 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  #ofrezco .cv-offer-card div {
+    font-size: 8.2pt !important;
+    line-height: 1.08 !important;
+    margin-bottom: 0.7mm !important;
+  }
+
+  #ofrezco .cv-offer-card ul {
+    margin: 0 !important;
+    padding-left: 3.2mm !important;
+  }
+
+  #ofrezco .cv-offer-card li {
+    font-size: 7pt !important;
+    line-height: 1.12 !important;
+    margin-bottom: 0.35mm !important;
+  }
+
   #docencia {
-    break-before: page !important;
-    page-break-before: always !important;
+    break-before: auto !important;
+    page-break-before: auto !important;
   }
 
   .cv-timeline {
@@ -257,5 +323,59 @@
 
   .cv-skill-tech-full {
     display: none !important;
+  }
+
+  .cv-footer-card {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 2mm 0 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    overflow: visible !important;
+    text-align: left !important;
+  }
+
+  .cv-footer-main {
+    display: block !important;
+  }
+
+  .cv-footer-name,
+  .cv-footer-role,
+  .cv-footer-tagline {
+    display: block !important;
+    text-align: left !important;
+  }
+
+  .cv-footer-name {
+    font-size: 9pt !important;
+    line-height: 1.1 !important;
+    margin: 0 0 0.6mm !important;
+  }
+
+  .cv-footer-role,
+  .cv-footer-tagline {
+    font-size: 7.2pt !important;
+    line-height: 1.12 !important;
+    margin: 0 0 0.5mm !important;
+  }
+
+  .cv-footer-links {
+    display: none !important;
+  }
+
+  .cv-footer-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1.6mm !important;
+    margin: 0.8mm 0 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    text-align: left !important;
+  }
+
+  .cv-footer-meta span {
+    display: inline !important;
+    font-size: 6.8pt !important;
+    line-height: 1.1 !important;
   }
 }
