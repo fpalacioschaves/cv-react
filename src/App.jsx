@@ -231,6 +231,10 @@ export default function App() {
 
   return (
     <div style={styles.app}>
+      <a className="skip-link" href="#contenido-principal">
+        {lang === 'es' ? 'Saltar al contenido' : 'Skip to content'}
+      </a>
+
       <div style={styles.layout}>
         <Header
           t={t}
@@ -253,7 +257,7 @@ export default function App() {
           scrolled={scrolled}
         />
 
-        <main>
+        <main id="contenido-principal" tabIndex="-1">
           <ProfileSection t={t} styles={styles} />
           <OffersSection offersText={offersText} styles={styles} />
           <ExperienceSection
