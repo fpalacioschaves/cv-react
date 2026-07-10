@@ -2,22 +2,22 @@ export const TEXT = {
   es: {
     chip: 'Currículum Vitae interactivo',
     headline:
-      'Docente técnico en DAW/DAM · Desarrollador PHP, WordPress, React y Node · Especialista en bases de datos',
+      'Docente FP TIC en DAM/DAW · Desarrollador web full stack · Tecnología educativa y datos',
     heroSummary:
-      'Combino experiencia real en desarrollo web con una trayectoria docente orientada a proyectos, acompañamiento del alumnado, documentación técnica clara y creación de herramientas educativas.',
-    badge: 'Disponible para colaboración docente, formación técnica y desarrollo web',
+      'Diseño formación técnica, materiales didácticos y soluciones web que conectan aula, código y problemas reales.',
+    badge: 'Disponible para docencia FP, formación técnica, proyectos web y herramientas educativas',
     profileTitle: 'Perfil profesional',
     profileP1:
-      'Soy docente de Formación Profesional en DAM/DAW y desarrollador web, con una base matemática y experiencia real construyendo soluciones con PHP, WordPress, JavaScript, React, Node.js, SQL y herramientas de gestión de datos.',
+      'Soy docente de Formación Profesional TIC en DAM/DAW y desarrollador web, con base matemática y experiencia construyendo soluciones con PHP, WordPress, JavaScript, React, Node.js, SQL y herramientas de gestión de datos.',
     profileP2:
-      'Mi valor está en la combinación: conozco el aula, conozco el código y sé convertir necesidades técnicas o educativas en materiales, aplicaciones, documentación y proyectos que se pueden usar de verdad.',
+      'Mi valor diferencial está en unir aula y desarrollo: traduzco necesidades educativas o técnicas en materiales, aplicaciones, documentación y proyectos útiles, mantenibles y orientados a uso real.',
     profileP3:
-      'Trabajo especialmente bien en entornos donde hay que ordenar problemas complejos, explicar tecnología con claridad, acompañar al alumnado o transformar procesos académicos en soluciones digitales mantenibles.',
+      'Trabajo especialmente bien en contextos donde hay que ordenar problemas complejos, explicar tecnología con claridad, acompañar procesos de aprendizaje o transformar gestión académica en soluciones digitales prácticas.',
     profileHighlights: [
-      { label: 'Perfil', value: 'Docente FP + desarrollador web' },
-      { label: 'Áreas fuertes', value: 'Desarrollo web, WordPress, datos, documentación y FP TIC' },
-      { label: 'Ubicación', value: 'Málaga · modalidad presencial y online' },
-      { label: 'Enfoque', value: 'Aprender haciendo, proyectos reales y soluciones mantenibles' },
+      { label: 'Perfil', value: 'Docente FP TIC + desarrollador web' },
+      { label: 'Áreas fuertes', value: 'Formación técnica, desarrollo web, WordPress, datos y documentación' },
+      { label: 'Ubicación', value: 'Málaga · modalidad presencial, online e híbrida' },
+      { label: 'Enfoque', value: 'Aula, código y proyectos reales' },
     ],
     teachingTitle: 'Experiencia docente',
     devTitle: 'Experiencia como programador',
@@ -52,9 +52,9 @@ export const TEXT = {
     viewOnGithub: 'Ver en GitHub',
     contactTitle: 'Contacto y disponibilidad',
     contactIntro1:
-      'Estoy abierto a colaboración docente en ciclos formativos, certificados de profesionalidad, formación para empresas y proyectos de desarrollo web.',
+      'Estoy abierto a colaboraciones en docencia FP TIC, certificados de profesionalidad, formación técnica para empresas y proyectos de desarrollo web con enfoque educativo o de gestión.',
     contactIntro2:
-      'Puedo aportar especialmente en programación, bases de datos, WordPress, materiales didácticos técnicos y proyectos educativos con componente software.',
+      'Puedo aportar especialmente en programación, bases de datos, WordPress, materiales didácticos técnicos, documentación clara y herramientas software para entornos formativos.',
     contactDirect: 'También puedes escribirme directamente a',
     contactNameLabel: 'Nombre',
     contactEmailLabel: 'Correo electrónico',
@@ -74,22 +74,22 @@ export const TEXT = {
   en: {
     chip: 'Interactive résumé',
     headline:
-      'Vocational IT teacher · PHP, WordPress, React & Node developer · Databases specialist',
+      'Vocational IT teacher for DAM/DAW · Full-stack web developer · Educational technology and data',
     heroSummary:
-      'I combine real web development experience with a teaching career focused on projects, student guidance, clear technical documentation and educational tools.',
-    badge: 'Available for teaching collaboration, technical training and web development',
+      'I design technical training, learning materials and web solutions that connect the classroom, code and real-world problems.',
+    badge: 'Available for vocational teaching, technical training, web projects and educational tools',
     profileTitle: 'Professional profile',
     profileP1:
-      'I am a vocational DAM/DAW teacher and web developer, with a mathematics background and real experience building solutions with PHP, WordPress, JavaScript, React, Node.js, SQL and data management tools.',
+      'I am a vocational IT teacher for DAM/DAW programmes and a web developer, with a mathematics background and real experience building solutions with PHP, WordPress, JavaScript, React, Node.js, SQL and data management tools.',
     profileP2:
-      'My value lies in the combination: I know the classroom, I know the code, and I can turn technical or educational needs into materials, applications, documentation and projects that can actually be used.',
+      'My differentiating value lies in connecting teaching and development: I turn educational or technical needs into useful, maintainable materials, applications, documentation and real-world projects.',
     profileP3:
-      'I work especially well in contexts where complex problems need to be organised, technology needs to be explained clearly, students need guidance, or academic processes need to become maintainable digital solutions.',
+      'I work especially well in contexts where complex problems need structure, technology must be explained clearly, learning processes need guidance, or academic management has to become practical digital solutions.',
     profileHighlights: [
-      { label: 'Profile', value: 'Vocational teacher + web developer' },
-      { label: 'Strong areas', value: 'Web development, WordPress, data, documentation and IT training' },
-      { label: 'Location', value: 'Málaga · on-site and online' },
-      { label: 'Approach', value: 'Learning by doing, real projects and maintainable solutions' },
+      { label: 'Profile', value: 'Vocational IT teacher + web developer' },
+      { label: 'Strong areas', value: 'Technical training, web development, WordPress, data and documentation' },
+      { label: 'Location', value: 'Málaga · on-site, online and hybrid' },
+      { label: 'Approach', value: 'Classroom, code and real projects' },
     ],
     teachingTitle: 'Teaching experience',
     devTitle: 'Developer experience',
@@ -124,9 +124,9 @@ export const TEXT = {
     viewOnGithub: 'View on GitHub',
     contactTitle: 'Contact & availability',
     contactIntro1:
-      'I am open to teaching collaborations in vocational training, professional certificates, corporate training and web development projects.',
+      'I am open to collaborations in vocational IT teaching, professional certificates, technical training for companies and web development projects with an educational or management focus.',
     contactIntro2:
-      'I can contribute especially in programming, databases, WordPress, technical learning materials and software-based educational projects.',
+      'I can contribute especially in programming, databases, WordPress, technical learning materials, clear documentation and software tools for training environments.',
     contactDirect: 'You can also email me directly at',
     contactNameLabel: 'Name',
     contactEmailLabel: 'Email',
