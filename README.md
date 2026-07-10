@@ -1,37 +1,65 @@
 # CV React · Francisco Palacios Chaves
 
-CV interactivo desarrollado con React y Vite. El proyecto funciona como currículum online y pequeño portfolio profesional, con versión bilingüe, modo claro/oscuro, secciones navegables, proyectos destacados y formulario de contacto mediante EmailJS.
+[![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=111827)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-7-646cff?logo=vite&logoColor=ffffff)](https://vite.dev/)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-111827?logo=github)](https://fpalacioschaves.github.io/cv-react/)
 
-**URL en vivo:** https://fpalacioschaves.github.io/cv-react
+CV web y portfolio profesional desarrollado con React y Vite. El proyecto presenta mi perfil como **docente FP TIC en DAM/DAW**, **desarrollador web full stack** y profesional orientado a **tecnología educativa, documentación técnica, WordPress, datos y proyectos reales**.
 
-## Objetivo
+**Demo en vivo:** https://fpalacioschaves.github.io/cv-react/
 
-El objetivo del proyecto es presentar un perfil profesional mixto: docente técnico en ciclos DAM/DAW, desarrollador PHP/WordPress y perfil especializado en bases de datos, desarrollo web y formación TIC.
+## Objetivo del proyecto
 
-## Funcionalidades actuales
+Este repositorio no es solo una página personal. Está planteado como una pequeña aplicación frontend mantenible para presentar un perfil profesional híbrido: aula, código, documentación y soluciones digitales aplicadas a formación técnica.
 
-- Aplicación SPA creada con React y Vite.
+El objetivo principal es que el CV pueda funcionar en varios contextos:
+
+- Consulta rápida desde navegador.
+- Portfolio técnico enlazable desde GitHub o LinkedIn.
+- Versión imprimible / PDF.
+- Presentación bilingüe español-inglés.
+- Base fácilmente actualizable para nuevas experiencias, proyectos o tecnologías.
+
+## Funcionalidades principales
+
+- SPA desarrollada con React y Vite.
+- Diseño responsive para escritorio y móvil.
 - Modo claro/oscuro con persistencia en `localStorage`.
 - Contenido bilingüe en español e inglés.
 - Navegación por secciones con menú responsive.
 - Detección de sección activa durante el scroll.
-- Descarga del CV en PDF desde la carpeta `public`.
+- Efecto `scroll reveal` para aparición progresiva de tarjetas.
+- Versión optimizada para impresión/PDF mediante hojas CSS específicas.
 - Proyectos destacados definidos manualmente.
 - Carga de repositorios recientes desde la API pública de GitHub.
 - Formulario de contacto con EmailJS.
-- Metadatos básicos para SEO y redes sociales.
+- SEO, Open Graph, Twitter Card, favicon, manifest, `robots.txt` y `sitemap.xml`.
+- Despliegue en GitHub Pages.
+- Workflow de GitHub Actions para build y publicación automática.
 
-## Tecnologías
+## Stack técnico
 
-- React 19
-- Vite
-- JavaScript
-- CSS mediante estilos centralizados en JS y reglas globales mínimas
-- EmailJS
-- GitHub Pages
-- Firebase Hosting opcional
+| Área | Tecnologías |
+| --- | --- |
+| Frontend | React 19, JavaScript, Vite |
+| Estilos | CSS modular por capas, estilos centralizados en JS, CSS específico para responsive, accesibilidad, impresión y pulido visual |
+| Integraciones | EmailJS, GitHub public API |
+| SEO / publicación | Open Graph, Twitter Card, JSON-LD, sitemap, robots, GitHub Pages |
+| Automatización | GitHub Actions, gh-pages |
 
-## Instalación
+## Enfoque técnico
+
+El proyecto está organizado con una separación clara entre contenido, componentes y estilos:
+
+- Los textos profesionales viven en `src/data/`.
+- Las secciones visuales viven en `src/components/`.
+- Los estilos base están centralizados en `src/styles/createStyles.js`.
+- Los ajustes globales se reparten en hojas CSS específicas: responsive, accesibilidad, pulido visual, impresión y correcciones finales de PDF.
+- La configuración principal del CV, como usuario de GitHub, URL de LinkedIn, correo y nombre del PDF, se define en `src/config.js`.
+
+Esto permite actualizar el CV sin tener que tocar toda la aplicación.
+
+## Instalación local
 
 ```bash
 git clone https://github.com/fpalacioschaves/cv-react.git
@@ -40,21 +68,22 @@ npm install
 npm run dev
 ```
 
+La aplicación quedará disponible normalmente en:
+
+```txt
+http://localhost:5173
+```
+
 ## Scripts disponibles
 
 ```bash
-npm run dev       # Servidor de desarrollo
-npm run build     # Build de producción
-npm run preview   # Vista previa del build
-npm run lint      # Linting
-npm run deploy    # Despliegue a GitHub Pages
-```
-
-Para GitHub Pages se usa:
-
-```bash
-npm run build:gh
-npm run deploy
+npm run dev          # Servidor de desarrollo
+npm run build        # Build de producción
+npm run build:gh     # Build con base /cv-react/ para GitHub Pages
+npm run preview      # Vista previa del build
+npm run lint         # Revisión con ESLint
+npm run deploy       # Despliegue manual a GitHub Pages mediante gh-pages
+npm run deploy:firebase # Build y despliegue opcional en Firebase Hosting
 ```
 
 ## Variables de entorno
@@ -102,22 +131,82 @@ src/
 │   └── text.js
 ├── styles/
 │   └── createStyles.js
+├── accessibility.css
 ├── App.jsx
 ├── config.js
 ├── index.css
-└── main.jsx
+├── main.jsx
+├── print.css
+├── print-fixes.css
+├── responsive.css
+└── visual-polish.css
 ```
+
+## Despliegue
+
+El repositorio está preparado para GitHub Pages.
+
+Despliegue manual:
+
+```bash
+npm run deploy
+```
+
+Build específico para GitHub Pages:
+
+```bash
+npm run build:gh
+```
+
+También existe un workflow en `.github/workflows/deploy.yml` para construir y publicar automáticamente cuando se actualiza la rama `main`.
+
+## SEO y vista previa social
+
+El proyecto incluye:
+
+- Metadatos SEO básicos.
+- Open Graph para LinkedIn, WhatsApp y otras plataformas.
+- Twitter Card.
+- Imagen social `og-card.svg`.
+- Favicon propio.
+- Manifest web.
+- `robots.txt`.
+- `sitemap.xml`.
+- Datos estructurados `Person` con JSON-LD.
+
+## PDF e impresión
+
+El CV está preparado para imprimirse desde el navegador con:
+
+```txt
+Ctrl + P → Guardar como PDF → A4 → Escala 100%
+```
+
+La versión impresa utiliza reglas específicas en:
+
+```txt
+src/print.css
+src/print-fixes.css
+```
+
+Estas hojas corrigen paginación, saltos de sección, compactación de tarjetas y cierre del documento.
 
 ## Notas de mantenimiento
 
-- El contenido profesional está separado en `src/data/`.
-- La estructura visual está dividida en componentes dentro de `src/components/`.
-- Los estilos principales están centralizados en `src/styles/createStyles.js`.
-- Los datos sensibles o variables de servicio deben ir en `.env.local`, no en el repositorio.
-- El archivo PDF actual se define en `src/config.js` mediante `PDF_FILE_NAME`.
+- Actualizar experiencia profesional: `src/data/experience.js`.
+- Actualizar formación: `src/data/education.js`.
+- Actualizar habilidades: `src/data/skills.js`.
+- Actualizar proyectos destacados: `src/data/projects.js`.
+- Actualizar textos principales: `src/data/text.js`.
+- Actualizar nombre del PDF, correo, teléfono, GitHub o LinkedIn: `src/config.js`.
+- Ajustar la versión PDF: `src/print.css` y `src/print-fixes.css`.
 
 ## Autor
 
 **Francisco Palacios Chaves**
 
-Docente técnico en DAW/DAM, desarrollador PHP/WordPress y perfil especializado en bases de datos, desarrollo web y formación TIC.
+Docente FP TIC en DAM/DAW, desarrollador web full stack y perfil especializado en formación técnica, WordPress, JavaScript, React, Node.js, PHP, SQL, bases de datos, documentación y tecnología educativa.
+
+- GitHub: https://github.com/fpalacioschaves
+- LinkedIn: https://linkedin.com/in/fpalacioschaves
+- CV online: https://fpalacioschaves.github.io/cv-react/
